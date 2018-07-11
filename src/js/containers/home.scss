@@ -1,0 +1,55 @@
+.container {
+  position: relative;
+  width: 1000px;
+  margin: 10px auto;
+}
+.topbg {
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-image:url("../../assets/img_kv.png");
+}
+
+.body {
+  height: 3000px;
+  width: 100%;
+}
+
+.detail {
+  position: absolute;
+  top:10%;
+  width: 90%;
+  left: 5%;
+  height: 800px;
+  border-radius: 10%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-image:url("../../assets/back_middle.png");
+}
+
+.join {
+  margin: 0 auto;
+  height: 77px;
+  width: 183px;
+}
+
+.title {
+  height: 200px;
+  width: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.condition {
+  font-size: 18px;
+  line-height: 27px;
+}
