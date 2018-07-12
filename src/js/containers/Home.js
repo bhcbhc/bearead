@@ -8,6 +8,8 @@ import {bindActionCreators} from 'redux';
 import *  as CounterActions from '../redux/actions/countActions'
 import Annotation  from '../components/Annotation';
 import AwardContent from '../components/AwardContent';
+import AllawardContent from '../components/AllawardContent';
+import Footer from '../components/Footer';
 import style from './home.scss';
 import "../../styles/app.scss";
 
@@ -63,35 +65,80 @@ class Home extends Component {
                         <div className={style.title}>
                             <img  src={timeHead}/>
                         </div>
+                        <div className={style.time_partone}>
+                            <p>活动时间：7月20日-9月10日</p>
+                            <p>投票时间：2018年10月21日-10月30日</p>
+                            <p>公布时间：2018年11月12日</p>
+                        </div>
+                        <div className={style.time_parttwo}>
+                            <p>截止报名时间：8月30日24点   截止收稿时间：9月10日24点</p>
+                            <p>编辑评选时间：9月11日-9月25日   评委评选时间：9月26日-10月10日</p>
+                        </div>
                     </div>
-                    <div className={style.title}>
-                        <img src={joinWayHead} />
+                    <div>
+                        <div className={style.title}>
+                            <img src={joinWayHead} />
+                        </div>
+                        <div className={style.joinmethod}>
+                            <p>第一步</p>
+                            <p>进入极光杯各分赛区页面，点击“我要参赛”</p>
+                            <p>1. 若无作品，选择创建新作品，创建完成后点击“确认参赛”</p>
+                            <p>2. 若有符合参赛条件的作品，选择已有作品，点击“确认参赛”</p>
+                            <p>第二步</p>
+                            <p>完成小说内容编辑后，选择发布类型“单篇”，并进入小说资料填写页面</p>
+                        </div>
                     </div>
-                    <div className={style.title}>
-                        <img  src={prodFeatureHead} />
+                    <div>
+                        <div className={style.title}>
+                            <img  src={prodFeatureHead} />
+                        </div>
+                        <div className={style.prodfeature}>
+                            <p>1.  由白熊阅读编辑部按评选规则，选出优秀作品给予相应奖励</p>
+                            <p> 2. 评选规则</p>
+                            <p>（1）由白熊阅读编辑部评选出TOP20的作品给到该赛区评委</p>
+                            <p>（2）由该赛区评委在白熊阅读编辑部给到的名单中，选出TOP10的作品进入投票环节</p>
+                            <p>（3）该赛区截止至2018年9月10日24时0分，分享榜的TOP5和评论榜的TOP5直接晋级
+                                投票环节。若该名单与由评委选出的TOP10出现重合，则按榜单顺延提名</p>
+                            <p>（4）投票规则 : 每位用户，需要登陆app，每天可以投25票，不限赛区，不限作品</p>
+                            <p>（5）作品质量，由白熊编辑部和该赛区评委评选，占总成绩60%</p>
+                            <p>（6）作品投票，占总成绩40%</p>
+                            <p>（7）作品按照以上两项的综合得分进行排名</p>
+                        </div>
                     </div>
                     <div>
                         <div className={style.title}>
                             <img  src={awardHead} />
                         </div>
+                        <div>
                         <AwardContent level="一等奖" count={3000} />
-                        <AwardContent level="二等奖" count={3000}/>
-                        <AwardContent level="二等奖" count={3000}/>
+                        <AwardContent level="二等奖" count={1500} />
+                        <AwardContent level="二等奖" count={800} />
+                        <AwardContent level="最佳人气奖" count={500} />
+                        </div>
                     </div>
-                    <div className={style.title}>
-                        <img  src={allDivisionAwardHead} />
+                    <div>
+                        <div className={style.title}>
+                            <img  src={allDivisionAwardHead} />
+                        </div>
+                        <div>
+                            <AllawardContent level="白熊人气王" count={3000} content="由六个赛区最佳人气奖的最高票决出，如果出现票数一样的情况，该票数一致的作品限时24小时投票决定" />
+                            <AllawardContent level="编辑部之星" count={3000} content="由白熊编辑部在全部赛区中评选" />
+                        </div>
+                    </div>
+                    <div>
+                        <Footer />
                     </div>
                 </div>
                 <div className={style.topbg} />
                 <div className={style.topbg}>
                  <img src={bg2} height="100%" width="100%" />
-             </div>
+                </div>
                 <div className={style.topbg}>
                  <img src={bg2} height="100%" width="100%" />
-             </div>
+                </div>
                 <div className={style.body}>
                  <img src={bg}  height="100%" width="100%" />
-             </div>
+                </div>
             </div>
         )
     }

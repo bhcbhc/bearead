@@ -5,13 +5,13 @@
 import React, {Component} from 'react';
 import style from './index.scss';
 
-export  default class Annotation extends Component {
+export default class Annotation extends Component {
     constructor(props) {
         super(props)
     }
 
     render () {
-        const {level, count} = this.props;
+        const {level, count, content} = this.props;
         return (
             <div className={style.container}>
                 <div className={style.award_one}>
@@ -25,6 +25,9 @@ export  default class Annotation extends Component {
                 </div>
                 <div className={style.award_three}>
                     <p>{`${count}元`}</p>
+                </div>
+                <div className={style.award_four}>
+                    <p>{`${content}`}</p>
                 </div>
             </div>
         )

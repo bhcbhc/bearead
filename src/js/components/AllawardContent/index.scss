@@ -1,7 +1,7 @@
 .container {
-  margin: 10px auto;
+  margin:10px auto;
   width: 546px;
-  height: 120px;
+  height: 200px;
   color: #9FABDD;
   text-align: center;
   opacity: 0.3;
@@ -11,19 +11,22 @@
 .award_one {
   font-size: 24px;
   letter-spacing: 1.5px;
-  background-color: #252235;
 }
 
 .award_two {
   font-size: 18px;
   letter-spacing: 0;
   line-height: 18px;
-  background-color: #252235;
 }
 
 .award_three {
   font-size: 32px;
   letter-spacing: 0;
   line-height: 32px;
-  background-color: #252235;
+}
+
+.award_four {
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 20px;
 }
