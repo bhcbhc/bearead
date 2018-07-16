@@ -9,6 +9,7 @@ import *  as CounterActions from '../redux/actions/countActions'
 import Annotation  from '../components/Annotation';
 import AwardContent from '../components/AwardContent';
 import AllawardContent from '../components/AllawardContent';
+import Division from '../components/Division';
 import Footer from '../components/Footer';
 import style from './home.scss';
 import "../../styles/app.scss";
@@ -26,6 +27,35 @@ const prodFeatureHead = require('../../assets/productFeature.png'); // 作品评
 const awardHead = require('../../assets/award.png'); // 奖项设置
 const allDivisionAwardHead = require('../../assets/allDivisionAward.png'); //总赛区奖项设置
 
+//单篇赛区
+const  btn1 = require('../../assets/btn_1_unselect.png');
+const  btn1_holder= require('../../assets/btn_1_holder.png');
+const  btn1_select= require('../../assets/btn_1_select.png');
+
+//古风赛区
+const  btn2 = require('../../assets/btn_2_unselect.png');
+const  btn2_holder= require('../../assets/btn_2_holder.png');
+const  btn2_select= require('../../assets/btn_2_select.png');
+
+//幻想赛区
+const  btn3 = require('../../assets/btn_3_unselect.png');
+const  btn3_holder= require('../../assets/btn_3_holder.png');
+const  btn3_select= require('../../assets/btn_3_select.png');
+
+//脑洞、悬疑赛区
+const  btn4 = require('../../assets/btn_4_unselect.png');
+const  btn4_holder= require('../../assets/btn_4_holder.png');
+const  btn4_select= require('../../assets/btn_4_select.png');
+
+//职场赛区
+const  btn5 = require('../../assets/btn_5_unselect.png');
+const  btn5_holder= require('../../assets/btn_5_holder.png');
+const  btn5_select= require('../../assets/btn_5_select.png');
+
+//青春赛区
+const  btn6 = require('../../assets/btn_6_unselect.png');
+const  btn6_holder= require('../../assets/btn_6_holder.png');
+const  btn6_select= require('../../assets/btn_6_select.png');
 
 class Home extends Component {
     render() {
@@ -36,9 +66,19 @@ class Home extends Component {
                         <div className={style.title}>
                             <img  src={divisionHead}/>
                         </div>
-                        <div>
-                            <Annotation />
+                        <div className="divisionContainer">
+                            <div>
+                                <Division imgUrl={ btn1 } holdImg={ btn1_holder } selectedImg={ btn1_select } alt="单篇赛区图片"  isActived={false}  gameId="1111" />
+                                <Division imgUrl={ btn2 } holdImg={ btn2_holder } selectedImg={ btn2_select } alt="古风赛区图片"  isActived={false}  gameId="1112" />
+                                <Division imgUrl={ btn3} holdImg={ btn3_holder  } selectedImg={ btn3_select } alt="幻想赛区图片"  isActived={false}  gameId="1113" />
+                            </div>
+                            <div>
+                                <Division imgUrl={ btn4 } holdImg={ btn4_holder } selectedImg={ btn4_select  } alt="脑洞悬疑赛区图片"  isActived={true}  gameId="1114" />
+                                <Division imgUrl={ btn5 } holdImg={ btn5_holder  } selectedImg={ btn5_select } alt="职场赛区图片"  isActived={false}  gameId="1115" />
+                                <Division imgUrl={ btn6 } holdImg={ btn6_holder } selectedImg={ btn6_select } alt="青春赛区图片"  isActived={false}  gameId="1116" />
+                            </div>
                         </div>
+                        <Annotation />
                         <div className={style.join}>
                             <img src={join} height="100%"  width="100%" alt="joinBtn"/>
                         </div>

@@ -16,3 +16,10 @@ html {
   height: 100%;
   width: 100%;
 }
+.divisionContainer {
+  >div {
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
