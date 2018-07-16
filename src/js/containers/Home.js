@@ -10,11 +10,11 @@ import Annotation  from '../components/Annotation';
 import AwardContent from '../components/AwardContent';
 import AllawardContent from '../components/AllawardContent';
 import Division from '../components/Division';
+import Jury from '../components/Jury';
 import Footer from '../components/Footer';
 import style from './home.scss';
 import "../../styles/app.scss";
 
-const bg2 = require('../../assets/img_bg_1.png');
 const bg = require('../../assets/BG.png');
 const join = require('../../assets/btn_cs.png');
 
@@ -57,36 +57,47 @@ const  btn6 = require('../../assets/btn_6_unselect.png');
 const  btn6_holder= require('../../assets/btn_6_holder.png');
 const  btn6_select= require('../../assets/btn_6_select.png');
 
+//评委头像
+const jury1 = require('../../assets/user_1.png');
+const jury2 = require('../../assets/user_2.png');
+
 class Home extends Component {
     render() {
         return (
             <div className={style.container}>
+                <div className={style.topbg} />
                 <div className={style.detail}>
-                    <div>
+                    <div className={style.content}>
                         <div className={style.title}>
                             <img  src={divisionHead}/>
                         </div>
-                        <div className="divisionContainer">
+                        <div className={`divisionContainer`}>
                             <div>
-                                <Division imgUrl={ btn1 } holdImg={ btn1_holder } selectedImg={ btn1_select } alt="单篇赛区图片"  isActived={false}  gameId="1111" />
+                                <Division imgUrl={ btn1 } holdImg={ btn1_holder } selectedImg={ btn1_select } alt="单篇赛区图片"  isActived={true}  gameId="1111" />
                                 <Division imgUrl={ btn2 } holdImg={ btn2_holder } selectedImg={ btn2_select } alt="古风赛区图片"  isActived={false}  gameId="1112" />
                                 <Division imgUrl={ btn3} holdImg={ btn3_holder  } selectedImg={ btn3_select } alt="幻想赛区图片"  isActived={false}  gameId="1113" />
                             </div>
                             <div>
-                                <Division imgUrl={ btn4 } holdImg={ btn4_holder } selectedImg={ btn4_select  } alt="脑洞悬疑赛区图片"  isActived={true}  gameId="1114" />
+                                <Division imgUrl={ btn4 } holdImg={ btn4_holder } selectedImg={ btn4_select  } alt="脑洞悬疑赛区图片"  isActived={false}  gameId="1114" />
                                 <Division imgUrl={ btn5 } holdImg={ btn5_holder  } selectedImg={ btn5_select } alt="职场赛区图片"  isActived={false}  gameId="1115" />
                                 <Division imgUrl={ btn6 } holdImg={ btn6_holder } selectedImg={ btn6_select } alt="青春赛区图片"  isActived={false}  gameId="1116" />
                             </div>
                         </div>
                         <Annotation />
-                        <div className={style.join}>
+                        <a className={style.join} href="javascript: void(0)">
                             <img src={join} height="100%"  width="100%" alt="joinBtn"/>
+                        </a>
+                    </div>
+                    <div className={style.content}>
+                        <div className={style.title}>
+                            <img  src={juryHead} />
+                        </div>
+                        <div className={style.juryContaienr}>
+                            <Jury juryUrl={jury1} name="USER" introduce="已跟漫画工作室确认改名没有问题"/>
+                            <Jury juryUrl={jury2} name="白熊阅读" introduce="已跟漫画工作室确认改名没有问题"/>
                         </div>
                     </div>
-                    <div className={style.title}>
-                        <img  src={juryHead}/>
-                    </div>
-                    <div>
+                    <div className={style.content}>
                         <div className={style.title}>
                             <img  src={conditionHead}/>
                         </div>
@@ -101,7 +112,7 @@ class Home extends Component {
                             <p>8、本活动最终解释权归“白熊阅读”所有。</p>
                         </div>
                     </div>
-                    <div>
+                    <div className={style.content}>
                         <div className={style.title}>
                             <img  src={timeHead}/>
                         </div>
@@ -115,7 +126,7 @@ class Home extends Component {
                             <p>编辑评选时间：9月11日-9月25日   评委评选时间：9月26日-10月10日</p>
                         </div>
                     </div>
-                    <div>
+                    <div className={style.content}>
                         <div className={style.title}>
                             <img src={joinWayHead} />
                         </div>
@@ -128,7 +139,7 @@ class Home extends Component {
                             <p>完成小说内容编辑后，选择发布类型“单篇”，并进入小说资料填写页面</p>
                         </div>
                     </div>
-                    <div>
+                    <div className={style.content}>
                         <div className={style.title}>
                             <img  src={prodFeatureHead} />
                         </div>
@@ -145,7 +156,7 @@ class Home extends Component {
                             <p>（7）作品按照以上两项的综合得分进行排名</p>
                         </div>
                     </div>
-                    <div>
+                    <div className={style.content}>
                         <div className={style.title}>
                             <img  src={awardHead} />
                         </div>
@@ -156,7 +167,7 @@ class Home extends Component {
                         <AwardContent level="最佳人气奖" count={500} />
                         </div>
                     </div>
-                    <div>
+                    <div className={style.content}>
                         <div className={style.title}>
                             <img  src={allDivisionAwardHead} />
                         </div>
@@ -168,16 +179,6 @@ class Home extends Component {
                     <div>
                         <Footer />
                     </div>
-                </div>
-                <div className={style.topbg} />
-                <div className={style.topbg}>
-                 <img src={bg2} height="100%" width="100%" />
-                </div>
-                <div className={style.topbg}>
-                 <img src={bg2} height="100%" width="100%" />
-                </div>
-                <div className={style.body}>
-                 <img src={bg}  height="100%" width="100%" />
                 </div>
             </div>
         )

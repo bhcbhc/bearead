@@ -1,13 +1,21 @@
 @charset "utf-8";
 
+$marginTop1: 40px;
+$marginTop2: 20px;
+
 .annotation {
   color:#9FABDD;
   p {
     font-size: 20px;
     line-height: 26px;
   }
+  margin-bottom: $marginTop2;
 }
 
 .context {
   text-align: center;
+  margin-top:$marginTop2;
+  &:first-child {
+    margin-top: $marginTop1;
+  }
 }

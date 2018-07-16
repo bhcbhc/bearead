@@ -111,5 +111,5 @@ export default {
             }
         ]
     },
-    postcss: ()=> [precss,autoprefixer,rucksackCss,px2rem(px2remOpts)]
+    postcss: ()=> [precss,autoprefixer,rucksackCss]
 };

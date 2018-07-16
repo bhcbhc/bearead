@@ -4,3 +4,23 @@
   width: 300px;
   border-radius: 150px;
 }
+.jury {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 60px;
+  }
+}
+
+.name {
+  font-size: 26px;
+  line-height: 37px;
+}
+
+.introduce {
+  font-size: 18px;
+  line-height: 25px;
+}
