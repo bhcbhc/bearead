@@ -11,6 +11,7 @@ import AwardContent from '../components/AwardContent';
 import AllawardContent from '../components/AllawardContent';
 import Division from '../components/Division';
 import Jury from '../components/Jury';
+import RankList from '../components/RankList';
 import Footer from '../components/Footer';
 import style from './home.scss';
 import "../../styles/app.scss";
@@ -61,11 +62,18 @@ const  btn6_select= require('../../assets/btn_6_select.png');
 const jury1 = require('../../assets/user_1.png');
 const jury2 = require('../../assets/user_2.png');
 
+const topLogo = require('../../assets/logo_bxyd.png');
+
 class Home extends Component {
     render() {
         return (
             <div className={style.container}>
-                <div className={style.topbg} />
+                <button className={style.topBtn} />
+                <div className={style.topbg}>
+                    <div className={style.logo}>
+                        <img src={topLogo} />
+                    </div>
+                </div>
                 <div className={style.detail}>
                     <div className={style.content}>
                         <div className={style.title}>
@@ -176,9 +184,13 @@ class Home extends Component {
                             <AllawardContent level="编辑部之星" count={3000} content="由白熊编辑部在全部赛区中评选" />
                         </div>
                     </div>
-                    <div>
-                        <Footer />
-                    </div>
+                </div>
+                <div className={style.helpWife}></div>
+                <div className={style.rankListContainer}>
+                    <RankList />
+                </div>
+                <div>
+                    <Footer />
                 </div>
             </div>
         )

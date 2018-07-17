@@ -14,12 +14,7 @@ export  default class Annotation extends Component {
         const {level, count} = this.props;
         return (
             <div className={style.container}>
-                <div className={style.award_one}>
-                    <h2>{`${level} 1名`}</h2>
-                </div>
-                <div>
-                    <hr/>
-                </div>
+                <h2>{`${level} 1名`}</h2>
                 <div className={style.award_two}>
                     <p>奖金</p>
                 </div>
