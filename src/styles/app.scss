@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +14,9 @@ html {
   color: #9FABDD;
 }
 
+body::-webkit-scrollbar {
+  display: none;/*隐藏滚轮*/
+}
 
 #app {
   height: 100%;
@@ -23,6 +28,11 @@ html {
     display: flex;
     justify-content: flex-start;
   }
+}
+
+.step {
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .left {

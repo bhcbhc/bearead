@@ -24,8 +24,11 @@ $detailMargin: 100px;
   width: 60px;
   position: fixed;
   border-radius: 10px;
+  border:0;
+  outline: none;
   top:48%;
-  right:0;
+  right:8%;
+  z-index: 999;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-image:url("../../assets/ico_top.png");
@@ -55,8 +58,10 @@ $detailMargin: 100px;
 }
 
 .join {
-  margin: 0 auto;
   display: block;
+  position: absolute;
+  top: 700px;
+  right: 100px;
   height: 77px;
   width: 183px;
 }
@@ -83,23 +88,32 @@ $detailMargin: 100px;
 }
 
 .time_partone {
-  font-size: 18px;
-  letter-spacing: 1px;
   text-align: center;
-  line-height: 20px;
+  p {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .time_parttwo {
+  padding: 20px 0;
   background-color: #23223D;
-  font-size: 14px;
   text-align: center;
+  p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
 }
 
 .joinmethod {
-  font-size: 16px;
-  letter-spacing: 1px;
-  line-height: 22px;
   text-align: center;
+  p {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 22px;
+  }
 }
 
 .juryContaienr {
@@ -108,9 +122,12 @@ $detailMargin: 100px;
 }
 
 .prodfeature {
-  font-size: 14px;
   text-align: left;
-  line-height: 16px;
+  p {
+    font-size: 14px;
+    line-height: 16px;
+    padding-bottom: 15px;
+  }
 }
 
 .helpWife {

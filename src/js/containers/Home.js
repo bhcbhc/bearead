@@ -13,6 +13,8 @@ import Division from '../components/Division';
 import Jury from '../components/Jury';
 import RankList from '../components/RankList';
 import Footer from '../components/Footer';
+import LayerIcon from '../components/LayerIcon';
+
 import style from './home.scss';
 import "../../styles/app.scss";
 
@@ -64,11 +66,20 @@ const jury2 = require('../../assets/user_2.png');
 
 const topLogo = require('../../assets/logo_bxyd.png');
 
+function toTop() {
+    document.body.scrollTop = 0;
+}
+
 class Home extends Component {
+
     render() {
         return (
             <div className={style.container}>
-                <button className={style.topBtn} />
+                <button onClick={toTop} className={style.topBtn} />
+                <a className={style.join} href="javascript: void(0)">
+                    <img src={join} height="100%"  width="100%" alt="joinBtn"/>
+                </a>
+                <LayerIcon />
                 <div className={style.topbg}>
                     <div className={style.logo}>
                         <img src={topLogo} />
@@ -92,9 +103,6 @@ class Home extends Component {
                             </div>
                         </div>
                         <Annotation />
-                        <a className={style.join} href="javascript: void(0)">
-                            <img src={join} height="100%"  width="100%" alt="joinBtn"/>
-                        </a>
                     </div>
                     <div className={style.content}>
                         <div className={style.title}>
@@ -139,11 +147,11 @@ class Home extends Component {
                             <img src={joinWayHead} />
                         </div>
                         <div className={style.joinmethod}>
-                            <p>第一步</p>
+                            <p className="step">第一步</p>
                             <p>进入极光杯各分赛区页面，点击“我要参赛”</p>
                             <p>1. 若无作品，选择创建新作品，创建完成后点击“确认参赛”</p>
                             <p>2. 若有符合参赛条件的作品，选择已有作品，点击“确认参赛”</p>
-                            <p>第二步</p>
+                            <p className="step">第二步</p>
                             <p>完成小说内容编辑后，选择发布类型“单篇”，并进入小说资料填写页面</p>
                         </div>
                     </div>
