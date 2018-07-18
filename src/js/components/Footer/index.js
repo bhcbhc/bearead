@@ -19,21 +19,30 @@ export default class Annotation extends Component {
         const {alt} = this.props;
         return (
             <div className={style.container}>
-                <div>
+                <div className={style.imgContainer}>
                     <img src={imgleft} alt={alt} width="243px" height="113px" />
                     <img src={imgright} alt={alt} width="243px" height="113px" />
                 </div>
                 <div className={style.copyright}>
-                    <p>@ 2018 Bearead.com All Rights Reserved     沪 ICP备 15041418号-1</p>
+                    <p>
+                        <span>@ 2018 Bearead.com All Rights Reserved</span>
+                        <span>沪 ICP备 15041418号-1</span>
+                    </p>
                 </div>
                 <div className={style.information}>
-                    <p>白熊阅读协议   关于白熊阅读   建议反馈   下载白熊APP   官方微博    商务合作: bd@bearead.cn</p>
+                    <p>
+                        <span>白熊阅读协议</span>
+                        <span>关于白熊阅读</span>
+                        <span>建议反馈</span>
+                        <span>下载白熊APP</span>
+                        <span>官方微博</span>
+                        <span>商务合作: bd@bearead.cn</span>
+                    </p>
                 </div>
-                <div>
-                    <img src={logo} alt={alt} width="124px" height="47" />
-                </div>
+                <img className={style.industry} src={logo} alt={alt} width="124px" height="47" />
                 <div className={style.confirmation}>
-                    <img src={confirmation} alt={alt} width="18px" height="20px" />&nbsp;沪公网安备 31010902002451 号
+                    <img  src={confirmation} alt={alt} width="18px" height="20px" />
+                    <sapn>沪公网安备 31010902002451 号</sapn>
                 </div>
             </div>
         )

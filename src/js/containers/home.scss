@@ -7,8 +7,9 @@ $detailMargin: 100px;
   position: relative;
   width: 100%;
   margin: 0 auto;
+  overflow: auto;
   background-size: cover;
-  background-image:url("../../assets/img_bg_1.png");
+  background-image:url("../../assets/img_bg.png");
 }
 .topbg {
   width: 100%;

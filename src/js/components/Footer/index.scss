@@ -1,25 +1,49 @@
 .container {
   color: #9FABDD;
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 300px;
+  width: 100%;
+  margin: 50px auto 0;
+  padding-bottom: 50px;
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-image:url("../../../assets/img_iceland.png");
 }
 
+.imgContainer {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin: 60px auto;
+}
+
 .copyright {
+  margin: 20px auto;
   font-size: 14px;
   letter-spacing: 0;
 }
 
 .information {
+  margin: 28px auto;
   font-size: 14px;
   letter-spacing: 0;
+  span {
+    margin-right: 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.industry {
+  display: block;
+  margin: 40px auto 20px;
 }
 
 .confirmation {
   font-size: 12px;
   letter-spacing: 0;
+  img {
+    margin-right: 10px;
+    position: relative;
+    top:4px;
+  }
 }
