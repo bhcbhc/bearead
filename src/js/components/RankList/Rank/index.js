@@ -39,40 +39,44 @@ export  default class Rank extends Component {
             index } =this.props;
 
         function getIcon(index) {
-            if(index === 0) return <img src={first} />;
-            else if (index === 1) return <img src={secont} />;
-            else if (index === 2) return <img src={third} />;
-            return <span>{index}</span>
+            if(index === 0) return <img className="left" src={first} />;
+            else if (index === 1) return <img className="left" src={secont} />;
+            else if (index === 2) return <img className="left" src={third} />;
+            return <span className="left">{index}</span>
         }
         return (
             <div className={style.rank} onClick={this.handleClick.bind(this, bid, appUrl, webUrl, wapUrl)}>
-                <div>
+                <div className={`${style.icon} left`}>
                     {getIcon(index)}
                 </div>
-                <div>
-                    <h2>{bookName}</h2>
-                    <p>{description}</p>
-                    <div>
-                        {
-                            label.map(item =>
-                                (
-                                    <span>{`${item}/`}</span>
+                <div className={`${style.container} left`}>
+                    <div className={`${style.content} clearfix`}>
+                        <img className="right"  src={cover}/>
+                        <h2 className={style.title}>{bookName}</h2>
+                        <p className={style.description}>{description}</p>
+                        <div className={style.tag}>
+                            {
+                                label.map((item,index) =>
+                                    (
+                                        <span>{index < label.length-1 ? `${item.name}/` : `${item.name}`}</span>
+                                    )
                                 )
-                            )
-                        }
-                    </div>
-                    <div>
-                        <div className={style.userImg}>
-                            <img src={authorImg} />
+                            }
                         </div>
-                        <span>{author}</span>
                     </div>
-                </div>
-                <div>
-                    <img  src={cover} />
-                    <div>
-                        <img src={isComment ? comment : share } />
-                        <span>{numberParser(count)}</span>
+                    <div className={`${style.author_count}`}>
+                        <div className={`${style.author}`}>
+                            <div className={style.userImg}>
+                                <img src={authorImg.split('_thumb')[0]} />
+                            </div>
+                            <span className={style.author}>{author}</span>
+                        </div>
+                        <div className={`${style.counts}`}>
+                            <div className={style.number}>
+                                <img src={isComment ? comment : share } />
+                                <span className={style.comment}>{numberParser(count)}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

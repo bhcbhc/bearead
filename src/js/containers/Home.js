@@ -187,7 +187,7 @@ class Home extends Component {
                 </div>
                 <div className={style.helpWife}></div>
                 <div className={style.rankListContainer}>
-                    <RankList />
+                    <RankList acid="110" />
                 </div>
                 <div>
                     <Footer />

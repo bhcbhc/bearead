@@ -21,7 +21,7 @@ browserSync({
     },
     server: {
         baseDir: 'src',
-
+        proxy: "https://v2.bearead.com",
         middleware: [
             historyApiFallback(),
 
