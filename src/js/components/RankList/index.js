@@ -49,16 +49,16 @@ export  default class RankList extends Component {
     async loadMore(acid) {
         let { page, type, data} = this.state;
         page= page + 1;
+        this.setState({
+            isLoading: true
+        });
         try {
-            this.state= {
-                isLoading: true
-            };
             let res = await getShare(type, acid, page, 20);
-            this.state= {
-                isLoading: false,
-                data: [].concat(data,res),
-                page
-            };
+            this.setState({
+                    isLoading: false,
+                    data: [].concat(data,res),
+                    page
+                });
         } catch (err) {
             console.log(err);
         }
@@ -98,7 +98,7 @@ export  default class RankList extends Component {
                         {
                             data.map((item, index) =>(
                                 <Rank
-                                    key={item.bid}
+                                    key={`${item.bid}_${index}`}
                                     bookName={item.book_name}
                                     description={item.desc}
                                     label={item.tags}
@@ -111,7 +111,7 @@ export  default class RankList extends Component {
                                     webUrl={item.web_url}
                                     wapUrl={item.wap_url}
                                     isComment={type === "comment" ? true : false}
-                                    index={index} />
+                                    index={index+1} />
                             ))
                         }
                         {

@@ -39,9 +39,9 @@ export  default class Rank extends Component {
             index } =this.props;
 
         function getIcon(index) {
-            if(index === 0) return <img className="left" src={first} />;
-            else if (index === 1) return <img className="left" src={secont} />;
-            else if (index === 2) return <img className="left" src={third} />;
+            if(index === 1) return <img className="left" src={first} />;
+            else if (index === 2) return <img className="left" src={secont} />;
+            else if (index === 3) return <img className="left" src={third} />;
             return <span className="left">{index}</span>
         }
         return (
@@ -58,7 +58,7 @@ export  default class Rank extends Component {
                             {
                                 label.map((item,index) =>
                                     (
-                                        <span>{index < label.length-1 ? `${item.name}/` : `${item.name}`}</span>
+                                        <span key={index}>{index < label.length-1 ? `${item.name}/` : `${item.name}`}</span>
                                     )
                                 )
                             }
@@ -74,7 +74,7 @@ export  default class Rank extends Component {
                         <div className={`${style.counts}`}>
                             <div className={style.number}>
                                 <img src={isComment ? comment : share } />
-                                <span className={style.comment}>{numberParser(count)}</span>
+                                <span className={style.comment}>{count === 0 ? "" : numberParser(count)}</span>
                             </div>
                         </div>
                     </div>
