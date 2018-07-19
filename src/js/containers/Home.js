@@ -17,8 +17,6 @@ import LayerIcon from '../components/LayerIcon';
 
 import style from './home.scss';
 import "../../styles/app.scss";
-
-const bg = require('../../assets/BG.png');
 const join = require('../../assets/btn_cs.png');
 
 const divisionHead = require('../../assets/division_title.png'); // 赛区
@@ -79,8 +77,8 @@ class Home extends Component {
                 <a className={style.join} href="javascript: void(0)">
                     <img src={join} height="100%"  width="100%" alt="joinBtn"/>
                 </a>
-                <LayerIcon />
                 <div className={style.topbg}>
+                    <LayerIcon />
                 </div>
                 <div className={style.detail}>
                         <div className={style.content}>

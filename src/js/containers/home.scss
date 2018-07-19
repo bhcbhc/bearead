@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-$topBgHeight: 1153px;
-$detailMargin: 520px;
+$topBgHeight: 960px;
+$detailMargin: 485px;
 
 .container {
   position: relative;
@@ -11,6 +11,7 @@ $detailMargin: 520px;
   background-image:url("../../assets/img_bg.png");
 }
 .topbg {
+  position: relative;
   width: 100%;
   height: $topBgHeight;
   background:url("../../assets/img_kv.png") center center no-repeat;
@@ -29,7 +30,7 @@ $detailMargin: 520px;
   border-radius: 10px;
   border:0;
   outline: none;
-  top:48%;
+  top:85%;
   right:8%;
   z-index: 999;
   background-size: 100% 100%;
@@ -64,10 +65,11 @@ $detailMargin: 520px;
 .join {
   display: block;
   position: absolute;
-  top: 700px;
-  right: 100px;
+  top: 570px;
+  right: 93px;
   height: 77px;
   width: 183px;
+  z-index: 999;
 }
 
 .title {
