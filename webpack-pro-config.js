@@ -7,7 +7,6 @@ const path = require('path');
 const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const pxtorem = require('postcss-pxtorem');
 // webpack中生成HTML的插件，
 
 module.exports = {
@@ -16,10 +15,7 @@ module.exports = {
         index: './src/js/index',
         vendor: [
             'react',
-            'react-dom',
-            'react-router',
-            'react-redux',
-            'redux'
+            'react-dom'
         ]
         // 为了优化，切割代码，提取第三方库（实际上，我们将会引入很多第三方库）
     },
@@ -161,11 +157,7 @@ module.exports = {
         return [
             require('precss'),
             require('autoprefixer'),
-            require('rucksack-css'),
-            pxtorem({
-                rootValue: 100,
-                propWhiteList: [],
-            })
+            require('rucksack-css')
         ];
     }
 };

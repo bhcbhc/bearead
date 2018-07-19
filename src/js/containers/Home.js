@@ -3,9 +3,6 @@
  *
  */
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import {bindActionCreators} from 'redux';
-import *  as CounterActions from '../redux/actions/countActions'
 import Annotation  from '../components/Annotation';
 import AwardContent from '../components/AwardContent';
 import AllawardContent from '../components/AllawardContent';
@@ -68,7 +65,7 @@ function toTop() {
     document.body.scrollTop = 0;
 }
 
-class Home extends Component {
+export default class Home extends Component {
 
     render() {
         return (
@@ -199,16 +196,3 @@ class Home extends Component {
         )
     }
 }
-
-const mapStateToProps = state => {
-    return {count: state.count}
-}
-
-const mapDispatchToProps = dispatch => {
-    return bindActionCreators(CounterActions, dispatch)
-}
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Home)
