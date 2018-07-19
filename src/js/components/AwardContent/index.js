@@ -15,7 +15,7 @@ export  default class Annotation extends Component {
         return (
             <div className={style.container}>
                 <h2>{`${level} 1名`}</h2>
-                <hr className={style.border} />
+                <div className={style.border} />
                 <p className={style.award_two}>奖金</p>
                 <div className={style.award_three}>
                     <p>{`${count}元`}</p>

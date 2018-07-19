@@ -1,12 +1,11 @@
 @charset "utf-8";
 
-$topBgHeight: 790px;
-$detailMargin: 100px;
+$topBgHeight: 1153px;
+$detailMargin: 520px;
 
 .container {
   position: relative;
   width: 100%;
-  margin: 0 auto;
   overflow: auto;
   background-size: cover;
   background-image:url("../../assets/img_bg.png");
@@ -14,9 +13,13 @@ $detailMargin: 100px;
 .topbg {
   width: 100%;
   height: $topBgHeight;
+  background:url("../../assets/img_kv.png") center center no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-image:url("../../assets/img_kv.png");
+}
+
+.bg_middle {
+  background:url("../../assets/img_bg.png") center center no-repeat;
+  background-size: cover;
 }
 
 .topBtn {
@@ -47,14 +50,15 @@ $detailMargin: 100px;
 }
 
 .detail {
-  width: 800px;
+  width: 812px;
   position: relative;
   margin: 0 auto;
+  padding-bottom: 20px;
   margin-top: -$detailMargin;
-  border-radius: 10%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image:url("../../assets/back_middle.png");
+  background-image:url("../../assets/back_web.png");
+  margin-bottom: 60px;
 }
 
 .join {
@@ -98,9 +102,18 @@ $detailMargin: 100px;
 }
 
 .time_parttwo {
-  padding: 20px 0;
-  background-color: #23223D;
+  padding: 19px 0;
+  background-color: rgba(#23223D,0.6);
   text-align: center;
+  width: 557px;
+  height: 80px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  div {
+    opacity: 1;
+  }
   p {
     font-size: 14px;
     margin-bottom: 10px;
