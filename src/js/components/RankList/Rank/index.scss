@@ -31,6 +31,7 @@
 .comment {
   font-size: 18px;
   letter-spacing: 1px;
+  line-height: 25px;
   text-align: right;
 }
 
@@ -77,8 +78,8 @@
   float: left;
   height: 27px;
   width: 27px;
-  border-radius: 40px;
   border: 1px;
+  border-radius: 13.5px;
   img {
     height: 100%;
     width: 100%;
@@ -110,6 +111,8 @@
   display: flex;
   justify-content: flex-start;
   img {
+    width: 24px;
+    height: 18px;
     margin-right: 10px;
   }
 }

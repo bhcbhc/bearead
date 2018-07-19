@@ -21,7 +21,7 @@ export default class Annotation extends Component {
             <div className={style.container}>
                 <div className={style.imgContainer}>
                     <img src={imgleft} alt={alt} width="243px" height="113px" />
-                    <img src={imgright} alt={alt} width="243px" height="113px" />
+                    <img src={imgright} alt={alt} width="210px" height="104px" />
                 </div>
                 <div className={style.copyright}>
                     <p>
