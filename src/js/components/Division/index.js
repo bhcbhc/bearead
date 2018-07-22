@@ -13,13 +13,6 @@ export default class Division extends Component {
         }
     }
 
-    handleClick (gameId, isActived, url) {
-        if(!isActived) {
-            console.log(gameId);
-            this.setState({basicUrl: url});
-        }
-    }
-
     handleMouserOver  (url) {
         this.setState({basicUrl: url});
     }
@@ -36,13 +29,11 @@ export default class Division extends Component {
             holdImg,
             selectedImg,
             alt,
-            isActived,
-            gameId
+            isActived
         } = this.props;
         return (
             <a
                 href="javascript:void (0)"
-                onClick={this.handleClick.bind(this,gameId, isActived, selectedImg)}
                 onMouseOver={this.handleMouserOver.bind(this, holdImg)}
                 onMouseOut={this.handleMouseOut.bind(this, imgUrl)}
                 className={style.division}
