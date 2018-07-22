@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 $topBgHeight: 960px;
-$detailMargin: 485px;
+$detailMargin: 400px;
 
 .container {
   position: relative;
@@ -14,7 +14,7 @@ $detailMargin: 485px;
   position: relative;
   width: 100%;
   height: $topBgHeight;
-  background:url("../../assets/img_kv.png") center center no-repeat;
+  background:url("../../assets/img_kv_web.png") center center no-repeat;
   background-size: cover;
 }
 
@@ -104,7 +104,7 @@ $detailMargin: 485px;
 }
 
 .time_parttwo {
-  padding: 19px 0;
+  padding: 5px 0;
   background-color: rgba(#23223D,0.6);
   text-align: center;
   width: 557px;

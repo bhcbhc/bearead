@@ -28,6 +28,12 @@
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0;
+  a {
+    margin-right: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    color:#9FABDD;
+  }
   span {
     margin-right: 20px;
     font-size: 14px;
@@ -37,16 +43,23 @@
 
 .industry {
   display: block;
-  margin: 40px auto 20px;
+  margin: 40px auto 0;
 }
 
 .confirmation {
   font-size: 12px;
   line-height: 17px;
   letter-spacing: 0;
+  text-decoration: none;
   img {
     margin-right: 10px;
     position: relative;
     top:4px;
+  }
+  span {
+    color:#9FABDD;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: 0;
   }
 }

@@ -1,10 +1,11 @@
 @charset "utf-8";
 .rankList {
-  background-color: #444162;
+  background-color: rgba(#444162, 0.6);
   margin: 0 auto;
   margin-top: 75px;
   padding-bottom: 20px;
   border-radius: 30px;
+  width: 690px;
   >div {
     width: 100%;
     margin: 0 auto;
@@ -26,10 +27,10 @@
 .loadMore {
   display: block;
   margin: 20px auto;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
-  line-height: 40px;
-  letter-spacing: 2.8px;
+  line-height: 28px;
+  letter-spacing: 2px;
   color: #9FABDD;
   outline: none;
   border: 0;

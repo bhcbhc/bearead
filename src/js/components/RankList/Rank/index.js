@@ -51,9 +51,13 @@ export  default class Rank extends Component {
                 </div>
                 <div className={`${style.container} left`}>
                     <div className={`${style.content} clearfix`}>
-                        <img className="right"  src={cover}/>
-                        <h2 className={style.title}>{bookName}</h2>
-                        <p className={style.description}>{description}</p>
+                        <div className={style.contentMain}>
+                            <img className="right"  src={cover}/>
+                            <p className={style.title}>{bookName}</p>
+                            <p className={style.descriptionContainer}>
+                                {description.length >= 72 ? `${description.substring(0, 70)}...` : description}
+                            </p>
+                        </div>
                         <div className={style.tag}>
                             {
                                 label.map((item,index) =>

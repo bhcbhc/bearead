@@ -63,6 +63,7 @@ const topLogo = require('../../assets/logo_bxyd.png');
 
 function toTop() {
     document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 
 export default class Home extends Component {
@@ -75,7 +76,7 @@ export default class Home extends Component {
                     <img src={join} height="100%"  width="100%" alt="joinBtn"/>
                 </a>
                 <div className={style.topbg}>
-                    <LayerIcon />
+                     {/*<LayerIcon />*/}
                 </div>
                 <div className={style.detail}>
                         <div className={style.content}>

@@ -14,8 +14,16 @@ html {
   color: #9FABDD;
 }
 
+a {
+  text-decoration: none;
+}
+
 body::-webkit-scrollbar {
   display: none;/*隐藏滚轮*/
+}
+
+img {
+  border: none;
 }
 
 #app {
@@ -26,6 +34,7 @@ body::-webkit-scrollbar {
   >div {
     margin: 0 auto;
     display: flex;
+    width: 550px;
     justify-content: flex-start;
   }
 }
@@ -49,4 +58,21 @@ body::-webkit-scrollbar {
   content: "";
   visibility: hidden;
   height: 0;
+}
+
+.icon {
+  display: inline-block;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-image: url(https://www.bearead.com/images/icon.svg);
+  background-repeat: no-repeat;
+}
+
+.icon-off {
+  width: 21px;
+  height: 21px;
+  float: right;
+  margin-top: 10px;
+  background-position: -240px -440px;
 }

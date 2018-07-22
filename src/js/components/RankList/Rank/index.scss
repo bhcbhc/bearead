@@ -37,8 +37,15 @@
 
 // content
 .icon {
-  width: 8%;
   margin-top: 10px;
+  height: 20px;
+  width: 15px;
+  margin-right: 20px;
+  img {
+    height: 100%;
+    width: 100%;
+    margin-top: 2px;
+  }
   >div {
     display: flex;
     justify-content: flex-start;
@@ -49,7 +56,7 @@
   }
   span {
     font-size: 20px;
-    line-height: 28px;
+    line-height: 24px;
   }
 }
 
@@ -83,8 +90,24 @@
   img {
     height: 100%;
     width: 100%;
+    border-radius: 50%;
   }
   margin-right: 10px;
+}
+
+.descriptionContainer {
+  height: 66px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  line-height: 22px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.contentMain {
+  overflow: hidden;
 }
 
 .description {
@@ -97,7 +120,6 @@
   line-height: 22px;
   color: #9FABDD;
   text-align: left;
-  margin: 20px 0;
 }
 
 .work {
@@ -112,7 +134,7 @@
   justify-content: flex-start;
   img {
     width: 24px;
-    height: 18px;
+    height: 24px;
     margin-right: 10px;
   }
 }

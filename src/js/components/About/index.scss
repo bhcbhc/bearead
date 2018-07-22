@@ -1,0 +1,96 @@
+.logins_page {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,255,255,0.95);
+  z-index: 99999;
+  overflow-y: scroll;
+}
+
+.aboutUs_waper {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.aboutUs_title {
+  width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  height: 100px;
+  .icon-off {
+    position: absolute;
+    right: 0;
+    top: 34px;
+  }
+  div {
+    position: absolute;
+    left: 0;
+    top: 34px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #3a3d40;
+    line-height: 33px;
+  }
+}
+
+.aboutTitle {
+  width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  height: 100px;
+}
+
+.aboutUs_mainBg {
+  border-top: 1px solid #EEF1F3;
+  width: 100%;
+}
+
+.aboutUs_main {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.aboutUs_content {
+  color: #3A3D40;
+  margin-top: 158px;
+  font-size: 16px;
+  line-height: 24px;
+  width: 640px;
+  float: left;
+  margin-left: 40px;
+}
+
+.aboutUs_content_1 {
+  color: #505458;
+  margin-bottom: 28px;
+}
+
+.aboutUs_content_2 {
+  color: #00001C;
+  font-weight: bold;
+}
+
+.aboutUs_content_3 {
+  color: #00001C;
+  font-weight: bold;
+}
+
+.aboutUs_contact {
+  margin-top: 40px;
+  color: #505458;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.aboutUs_img {
+  float: right;
+  margin-top: 77px;
+  margin-right: 40px;
+  img {
+    width: 226px;
+    height: 442px;
+  }
+}
