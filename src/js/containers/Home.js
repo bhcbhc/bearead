@@ -10,7 +10,8 @@ import Division from '../components/Division';
 import Jury from '../components/Jury';
 import RankList from '../components/RankList';
 import Footer from '../components/Footer';
-import LayerIcon from '../components/LayerIcon';
+
+import {getDetail} from '../service/getData';
 
 import style from './home.scss';
 import "../../styles/app.scss";
@@ -71,8 +72,19 @@ export default class Home extends Component {
     constructor(){
         super();
         this.state = {
-            acid: '1111'
+            acid: '115'
         }
+        this.loadDetail = this.loadDetail.bind(this)
+    }
+
+    componentDidMount(){
+        this.loadDetail();
+    }
+
+    async loadDetail() {
+        const {acid} = this.state;
+        const res = await  getDetail(acid);
+        console.log(res);
     }
 
     handleClick(bid) {
@@ -103,11 +115,11 @@ export default class Home extends Component {
                                     </div>
                                     <div className={`divisionContainer`}>
                                         <div>
-                                            <div onClick={this.handleClick.bind(this, '1111')}>
-                                                <Division imgUrl={ btn1 } holdImg={ btn1_holder } selectedImg={ btn1_select } alt="单篇赛区图片"  isActived={acid === '1111'} />
+                                            <div onClick={this.handleClick.bind(this, '128')}>
+                                                <Division imgUrl={ btn1 } holdImg={ btn1_holder } selectedImg={ btn1_select } alt="单篇赛区图片"  isActived={acid === '128'} />
                                             </div>
-                                            <div onClick={this.handleClick.bind(this, '1112')}>
-                                                <Division imgUrl={ btn2 } holdImg={ btn2_holder } selectedImg={ btn2_select } alt="古风赛区图片"  isActived={acid === '1112'}/>
+                                            <div onClick={this.handleClick.bind(this, '115')}>
+                                                <Division imgUrl={ btn2 } holdImg={ btn2_holder } selectedImg={ btn2_select } alt="古风赛区图片"  isActived={acid === '115'}/>
                                             </div>
                                             <div onClick={this.handleClick.bind(this, '1113')}>
                                                 <Division imgUrl={ btn3} holdImg={ btn3_holder  } selectedImg={ btn3_select } alt="幻想赛区图片"  isActived={acid === '1113'} />
@@ -236,7 +248,7 @@ export default class Home extends Component {
                     </div>
                 <div className={style.helpWife}></div>
                 <div className={style.rankListContainer}>
-                    <RankList acid="110" />
+                    <RankList acid="128" />
                 </div>
                 <Footer />
             </div>

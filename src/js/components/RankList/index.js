@@ -118,8 +118,8 @@ export  default class RankList extends Component {
                             isLoading ? (<div className={style.animate}><span className="fa fa-spinner fa-pulse" /></div>) : null
                         }
                     </div>
-                    <button className={style.loadMore} onClick={this.loadMore.bind(this, acid)}>查看更多</button>
                 </div>
+                <button className={style.loadMore} onClick={this.loadMore.bind(this, acid)}>查看更多</button>
             </div>
         )
     }

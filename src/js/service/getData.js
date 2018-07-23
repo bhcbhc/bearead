@@ -1,9 +1,11 @@
 /**
  * Created by ninghai on 2018/7/18
  */
+import qs from 'qs'
 import doRequest from './fetch';
 import {
-    RANK_API
+    RANK_API,
+    DETAIL_API
 } from './serviceConstants';
 
 export const getShare = (category, acid, page, pageSize) => doRequest({
@@ -16,3 +18,9 @@ export const getShare = (category, acid, page, pageSize) => doRequest({
         pageSize
     }
 });
+
+export const getDetail = acid => doRequest({
+    method: 'post',
+    url: DETAIL_API,
+    data: qs.stringify({acid})
+})
