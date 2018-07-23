@@ -11,10 +11,10 @@ export default class Annotation extends Component {
     }
 
     render () {
-        const {level, count, content} = this.props;
+        const {level, count, content , number} = this.props;
         return (
             <div className={style.container}>
-                <h2>{`${level} 1名`}</h2>
+                <h2>{`${level} ${number}名`}</h2>
                 <div className={style.border} />
                 <p className={style.award_two}>奖金</p>
                 <div className={style.award_three}>

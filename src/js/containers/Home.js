@@ -72,7 +72,9 @@ export default class Home extends Component {
     constructor(){
         super();
         this.state = {
-            acid: '115'
+            acid: '128',
+            isOver: false,
+            prizes: []
         }
         this.loadDetail = this.loadDetail.bind(this)
     }
@@ -84,18 +86,26 @@ export default class Home extends Component {
     async loadDetail() {
         const {acid} = this.state;
         const res = await  getDetail(acid);
-        console.log(res);
+        let {prizes} = res;
+        prizes = prizes.sort((item1, item2) =>item1.sort - item2.sort);
+        this.setState({
+            prizes: prizes.map(item => { return {id: item.acpid, prize: item.prize, sort: item.sort, number: item.number}})
+        });
     }
 
     handleClick(bid) {
         const {acid} = this.state;
+        const isOver = bid === '117' ? true: false;
         if (acid !== bid) {
-            this.setState({acid: bid})
+            this.setState({acid: bid, isOver});
+            if(this.state.acid === '128' || this.state.acid === '122'  || this.state.acid === '117') {
+                this.loadDetail();
+            }
         }
     }
 
     render() {
-        const {acid} = this.state;
+        const {acid, prizes} = this.state;
         return (
             <div className={style.container}>
                 <button onClick={toTop} className={style.topBtn} />
@@ -118,11 +128,11 @@ export default class Home extends Component {
                                             <div onClick={this.handleClick.bind(this, '128')}>
                                                 <Division imgUrl={ btn1 } holdImg={ btn1_holder } selectedImg={ btn1_select } alt="单篇赛区图片"  isActived={acid === '128'} />
                                             </div>
-                                            <div onClick={this.handleClick.bind(this, '115')}>
-                                                <Division imgUrl={ btn2 } holdImg={ btn2_holder } selectedImg={ btn2_select } alt="古风赛区图片"  isActived={acid === '115'}/>
+                                            <div onClick={this.handleClick.bind(this, '125')}>
+                                                <Division imgUrl={ btn2 } holdImg={ btn2_holder } selectedImg={ btn2_select } alt="古风赛区图片"  isActived={acid === '125'}/>
                                             </div>
-                                            <div onClick={this.handleClick.bind(this, '1113')}>
-                                                <Division imgUrl={ btn3} holdImg={ btn3_holder  } selectedImg={ btn3_select } alt="幻想赛区图片"  isActived={acid === '1113'} />
+                                            <div onClick={this.handleClick.bind(this, '117')}>
+                                                <Division imgUrl={ btn3} holdImg={ btn3_holder  } selectedImg={ btn3_select } alt="幻想赛区图片"  isActived={acid === '117'} />
                                             </div>
                                         </div>
                                         <div>
@@ -223,18 +233,44 @@ export default class Home extends Component {
                                     <div className={style.prodfeature}>
                                         <p>1.  由白熊阅读编辑部按评选规则，选出优秀作品给予相应奖励</p>
                                         <p> 2. 评选规则</p>
-                                        <p>（1）由白熊阅读编辑部评选出TOP20的作品给到该赛区评委</p>
-                                        <p>（2）由该赛区评委在白熊阅读编辑部给到的名单中，选出TOP10的作品进入投票环节</p>
-                                        <p>（3）该赛区截止至2018年9月20日24时0分，分享榜的TOP5和评论榜的TOP5直接晋级投票环节。若
-                                            该名单与由评委选出的TOP10出现重合，则按榜单顺延提名</p>
-                                        <p>（4）投票规则 : 每位用户，需要登陆app，每天可以投25票，不限赛区，不限作品
+                                        <div className={style.p_container}>
+                                            <p>（1）</p>
+                                            <p>由白熊阅读编辑部评选出TOP20的作品给到该赛区评委</p>
+                                        </div>
+                                        <div className={style.p_container}>
+                                            <p>（2）</p>
+                                            <p>由该赛区评委在白熊阅读编辑部给到的名单中，选出TOP10的作品进入投票环节</p></div>
+                                        <div className={style.p_container}>
+                                            <p>（3）</p>
+                                            <p>该赛区截止至2018年9月20日24时0分，分享榜的TOP5和评论榜的TOP5直接晋级投票环节。若该名单与由评委选出的TOP10出现重合，则按榜单顺延提名</p></div>
+                                        <div className={style.p_container}>
+                                            <p>（4）</p>
+                                            <p>投票规则 : 每位用户，需要登陆app，每天可以投25票，不限赛区，不限作品</p>
+                                        </div>
+                                        <div className={`${style.p_container} ${style.special_p}`}>
+                                            <p className="hide">（4）</p>
                                             <p>每位用户，投票结束，转发分享成功之后，可以获得5张赠票。每位用户每天赠票上限25张；</p>
+                                        </div>
+                                        <div className={`${style.p_container} ${style.special_p}`}>
+                                            <p className="hide">（4）</p>
                                             <p>每位用户，可以使用白熊币和小鱼干兑换投票，兑换比例为：10白熊币=1票；20小鱼干=1票。</p>
+                                        </div>
+                                        <div className={`${style.p_container} ${style.special_p} ${style.marigin_bt}`}>
+                                            <p className="hide">（4）</p>
                                             <p>每位用户每天兑换总计上限25票；</p>
-                                        </p>
-                                        <p>（5）作品质量，由白熊编辑部和该赛区评委评选，占总成绩60%</p>
-                                        <p>（6）作品投票，占总成绩40%</p>
-                                        <p>（7）作品按照以上两项的综合得分进行排名</p>
+                                        </div>
+                                        <div className={style.p_container}>
+                                            <p>（5）</p>
+                                            <p>作品质量，由白熊编辑部和该赛区评委评选，占总成绩60%</p>
+                                        </div>
+                                        <div className={style.p_container}>
+                                            <p>（6）</p>
+                                            <p>作品投票，占总成绩40%</p>
+                                        </div>
+                                        <div className={style.p_container}>
+                                            <p>（7）</p>
+                                            <p>作品按照以上两项的综合得分进行排名</p>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -244,24 +280,30 @@ export default class Home extends Component {
                                         <img  src={awardHead} />
                                     </div>
                                     <div>
-                                        <AwardContent level="一等奖" count={10000} />
-                                        <AwardContent level="二等奖" count={5000} />
-                                        <AwardContent level="三等奖" count={3000} />
-                                        <AwardContent level="最佳人气奖" count={3000} />
+                                        {
+                                            prizes.length<=4 ?
+                                                prizes.map(item => (<AwardContent key={item.sort} level={item.sort} count={item.prize} number={item.number}/>))
+                                                :
+                                                prizes.slice(0,4).map(item => (<AwardContent key={item.sort} level={item.sort} count={item.prize} number={item.number}/>))
+                                        }
                                     </div>
                                 </div>
                             </div>
-                            <div className={style.content}>
-                                <div>
-                                    <div className={style.title}>
-                                        <img  src={allDivisionAwardHead} />
+                            {
+                                prizes.length > 0 ? (
+                                    <div className={style.content}>
+                                        <div>
+                                            <div className={style.title}>
+                                                <img  src={allDivisionAwardHead} />
+                                            </div>
+                                            <div>
+                                                <AllawardContent level="白熊人气王" count={10000} number={1} content="由六个赛区最佳人气奖的最高票决出，如果出现票数一样的情况，该票数一致的作品限时24小时投票决定" />
+                                                <AllawardContent level="编辑部之星" count={10000} number={1} content="由白熊编辑部在全部赛区中评选" />
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <AllawardContent level="白熊人气王" count={10000} content="由六个赛区最佳人气奖的最高票决出，如果出现票数一样的情况，该票数一致的作品限时24小时投票决定" />
-                                        <AllawardContent level="编辑部之星" count={10000} content="由白熊编辑部在全部赛区中评选" />
-                                    </div>
-                                </div>
-                            </div>
+                                ) : null
+                            }
                         </div>
                     </div>
                 <div className={style.helpWife}></div>

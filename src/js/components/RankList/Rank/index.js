@@ -19,7 +19,7 @@ export  default class Rank extends Component {
     }
 
     handleClick (id, appUrl, webUrl, wapUrl) {
-        console.log(id, appUrl, webUrl, wapUrl);
+       window.location.href=webUrl;
     }
 
     render () {

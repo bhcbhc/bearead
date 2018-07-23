@@ -158,6 +158,24 @@ $detailMargin: 434px;
     line-height: 22px;
   }
 }
+.p_container {
+  display: flex;
+  justify-content: flex-start;
+  p {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+  }
+}
+
+.special_p{
+  p {padding-bottom: 0;}
+}
+
+.marigin_bt {
+  margin-bottom: 20px;
+}
 
 .juryContaienr {
   display: flex;
