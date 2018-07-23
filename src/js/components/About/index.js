@@ -15,18 +15,20 @@ export default class About extends  Component {
 
     componentWillReceiveProps(about) {if(about) this.setState({isOpen: true})}
 
-    handleClick() {
+    handleClick(closeEvent) {
         this.setState({isOpen: false});
+        closeEvent();
     }
 
     render() {
-        const { isOpen } = this.state;
+        const { isOpen} = this.state;
+        const { closeEvent } = this.props;
         return (
             <div className={style.logins_page} style={{display: isOpen ? "block" : 'none' }}>
                 <div className={style.aboutUs_waper}>
                     <div className={style.aboutUs_title}>
                     <div>关于白熊阅读</div>
-                    <i className="icon icon-off" onClick={this.handleClick.bind(this)} />
+                    <i className="icon icon-off" onClick={this.handleClick.bind(this, closeEvent)} />
                 </div>
                     <div className={`${style.aboutUs_mainBg} clearfix`}>
                     <div className={`${style.aboutUs_main} clearfix`}>

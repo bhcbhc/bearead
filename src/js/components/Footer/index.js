@@ -15,8 +15,7 @@ export default class Annotation extends Component {
     constructor(props) {
         super(props);
         this.state= {
-            about: false,
-            advice: false
+            about: false
         }
     }
 
@@ -26,15 +25,15 @@ export default class Annotation extends Component {
         })
     }
 
-    showAdvice() {
+    closeAbout() {
         this.setState({
-            advice: true
+            about: false
         })
     }
 
     render () {
         const {alt} = this.props;
-        const { about, advice }=this.state;
+        const { about}=this.state;
         return (
             <div className={style.container}>
                 <div className={style.imgContainer}>
@@ -51,7 +50,6 @@ export default class Annotation extends Component {
                     <p>
                         <a target="_blank" href="https://www.bearead.com/readrules.html?type=community">白熊阅读协议</a>
                         <span onClick={this.showAbout.bind(this)}>关于白熊阅读</span>
-                        <span onClick={this.showAdvice.bind(this)}>建议反馈</span>
                         <a target="_blank" href="https://www.bearead.com/app.html">下载白熊APP</a>
                         <a target="_blank" href="http://weibo.com/u/5709989373">官方微博</a>
                         <span>商务合作: bd@bearead.cn</span>
@@ -64,7 +62,7 @@ export default class Annotation extends Component {
                     <img  src={confirmation} alt={alt} width="18px" height="20px" />
                     <span>沪公网安备 31010902002451 号</span>
                 </a>
-                { about ? (<About isTrue={about} />) : null }
+                { about ? (<About isTrue={about} closeEvent={this.closeAbout.bind(this)} />) : null }
             </div>
         )
     }
