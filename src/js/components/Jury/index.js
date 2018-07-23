@@ -16,7 +16,9 @@ export  default class Jury extends Component {
             <div className={style.jury}>
                 <img src={juryUrl} alt="评委头像"/>
                 <p className={style.name}>{name}</p>
-                <p className={style.introduce}>{introduce}</p>
+                <div className={style.content}>
+                    {introduce.map((item,index) => (<p className={style.introduce} key={index}>{item}</p>))}
+                </div>
             </div>
         )
     }

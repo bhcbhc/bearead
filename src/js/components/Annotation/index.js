@@ -12,7 +12,7 @@ export  default class Annotation extends Component {
                 <div className={style.context}>
                     <p>爱与脑洞，缺一不可。</p>
                     <p>一年一度的白熊极光杯终于来啦！</p>
-                    <p>白熊极光杯致力于征集不流俗、不拘泥于套路、符合新一代年轻用户审美、适合影视或动漫或有声改编的优秀作品。</p>
+                    <p>白熊极光杯致力于征集不流俗、不拘泥 于套路、符合新一代年轻用户审美、适合影视或动漫或有声改编的优秀作品。</p>
                 </div>
                 <div className={style.context}>
                     <p>本次征文共分六个赛区：</p>

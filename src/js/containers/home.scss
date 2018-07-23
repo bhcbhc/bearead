@@ -32,7 +32,7 @@ $detailMargin: 434px;
   border:0;
   outline: none;
   top:650px;
-  right:8%;
+  right:4%;
   opacity: 0.3;
   z-index: 999;
   background-size: 100% 100%;
@@ -87,7 +87,7 @@ $detailMargin: 434px;
   display: block;
   position: fixed;
   top: 570px;
-  right: 8%;
+  right: 4%;
   height: 77px;
   width: 183px;
   z-index: 999;
@@ -154,7 +154,7 @@ $detailMargin: 434px;
   text-align: center;
   p {
     font-size: 16px;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     line-height: 22px;
   }
 }
@@ -166,9 +166,10 @@ $detailMargin: 434px;
 
 .prodfeature {
   text-align: left;
-  p {
-    font-size: 14px;
-    line-height: 16px;
+  >p {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 1px;
     padding-bottom: 15px;
   }
 }
@@ -191,4 +192,8 @@ $detailMargin: 434px;
 
 .shadow {
   background-color: rgba(#000, 0.07);
+}
+
+.jury {
+  width: 800px;
 }

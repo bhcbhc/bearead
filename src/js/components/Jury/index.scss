@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   img {
     width: 120px !important;
     height: 120px !important;
@@ -19,11 +20,14 @@
   font-size: 26px;
   line-height: 37px;
   margin-top: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .introduce {
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 1.75px;
+  font-size: 12px;
+  line-height: 17px;
+  letter-spacing: 1px;
+}
+.content {
+  text-align: center;
 }
