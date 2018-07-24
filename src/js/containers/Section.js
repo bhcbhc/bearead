@@ -39,7 +39,7 @@ class Detail extends Component {
                     <div className={style.title}>
                         <img src={log_24}/>
                     </div>
-                    <div>sdasdadsasdadad</div>
+                    <div>todo</div>
                     <div className={style.foot}>
                         <div className={style.footerLeft}>
                             <img src={log_44}/>

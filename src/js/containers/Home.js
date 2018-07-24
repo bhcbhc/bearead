@@ -17,18 +17,18 @@ import style from './home.scss';
 import "../../styles/app.scss";
 const join = require('../../assets/btn_cs.png');
 
-const divisionHead = require('../../assets/division_title.png'); // 赛区
-const juryHead = require('../../assets/jury.png'); // 评委
-const conditionHead = require('../../assets/condition.png'); // 参赛要求
-const timeHead = require('../../assets/activity_date.png'); // 活动时间
-const joinWayHead = require('../../assets/joinWay.png'); // 参与方式
-const prodFeatureHead = require('../../assets/productFeature.png'); // 作品评选
-const awardHead = require('../../assets/award.png'); // 奖项设置
-const allDivisionAwardHead = require('../../assets/allDivisionAward.png'); //总赛区奖项设置
+const divisionHead = require('../../assets/title_1.png'); // 赛区
+const juryHead = require('../../assets/title_2.png'); // 评委
+const conditionHead = require('../../assets/title_3.png'); // 参赛要求
+const timeHead = require('../../assets/title_4.png'); // 活动时间
+const joinWayHead = require('../../assets/title_5.png'); // 参与方式
+const prodFeatureHead = require('../../assets/title_6.png'); // 作品评选
+const awardHead = require('../../assets/title_7.png'); // 奖项设置
+const allDivisionAwardHead = require('../../assets/title_8.png'); //总赛区奖项设置
 
 //单篇赛区
 const  btn1 = require('../../assets/btn_1_unselect.png');
-const  btn1_holder= require('../../assets/btn_1_holder.png');
+const  btn1_holder= require('../../assets/btn_1_hover.png');
 const  btn1_select= require('../../assets/btn_1_select.png');
 
 //古风赛区
@@ -38,12 +38,12 @@ const  btn2_select= require('../../assets/btn_2_select.png');
 
 //幻想赛区
 const  btn3 = require('../../assets/btn_3_unselect.png');
-const  btn3_holder= require('../../assets/btn_3_holder.png');
+const  btn3_holder= require('../../assets/btn_3_hover.png');
 const  btn3_select= require('../../assets/btn_3_select.png');
 
 //脑洞、悬疑赛区
 const  btn4 = require('../../assets/btn_4_unselect.png');
-const  btn4_holder= require('../../assets/btn_4_holder.png');
+const  btn4_holder= require('../../assets/btn_4_hover.png');
 const  btn4_select= require('../../assets/btn_4_select.png');
 
 //职场赛区
@@ -109,10 +109,12 @@ export default class Home extends Component {
         const {router} = this.props;
         return (
             <div className={style.container}>
-                <button onClick={toTop} className={style.topBtn} />
-                <a className={style.join} href="https://www.bearead.com/app.html">
-                    <img src={join} height="100%"  width="100%" alt="joinBtn"/>
-                </a>
+                <div className={style.layerContainer}>
+                    <a className={style.join} href="https://www.bearead.com/app.html">
+                        <img src={join} height="100%"  width="100%" alt="joinBtn"/>
+                    </a>
+                    <button onClick={toTop} className={style.topBtn} />
+                </div>
                 <div className={style.topbg}>
                      {/*<LayerIcon />*/}
                 </div>
@@ -248,17 +250,10 @@ export default class Home extends Component {
                                             <p>（4）</p>
                                             <p>投票规则 : 每位用户，需要登陆app，每天可以投25票，不限赛区，不限作品</p>
                                         </div>
-                                        <div className={`${style.p_container} ${style.special_p}`}>
-                                            <p className="hide">（4）</p>
-                                            <p>每位用户，投票结束，转发分享成功之后，可以获得5张赠票。每位用户每天赠票上限25张；</p>
-                                        </div>
-                                        <div className={`${style.p_container} ${style.special_p}`}>
-                                            <p className="hide">（4）</p>
-                                            <p>每位用户，可以使用白熊币和小鱼干兑换投票，兑换比例为：10白熊币=1票；20小鱼干=1票。</p>
-                                        </div>
-                                        <div className={`${style.p_container} ${style.special_p} ${style.marigin_bt}`}>
-                                            <p className="hide">（4）</p>
-                                            <p>每位用户每天兑换总计上限25票；</p>
+                                        <div className={`${style.inner} ${style.marigin_bt}`}>
+                                                <p>每位用户，投票结束，转发分享成功之后，可以获得5张赠票。每位用户每天赠票上限25张；</p>
+                                                <p>每位用户，可以使用白熊币和小鱼干兑换投票，兑换比例为：10白熊币=1票；20小鱼干=1票。</p>
+                                                <p>每位用户每天兑换总计上限25票；</p>
                                         </div>
                                         <div className={style.p_container}>
                                             <p>（5）</p>

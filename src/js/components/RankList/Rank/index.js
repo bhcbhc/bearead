@@ -11,7 +11,7 @@ import style from './index.scss';
 
 const first = require('../../../../assets/ico_fist.png');
 const secont = require('../../../../assets/ico_second.png');
-const third = require('../../../../assets/ico_thrid.png');
+const third = require('../../../../assets/ico_third.png');
 
 const share = require('../../../../assets/ico_share.png');
 const comment = require('../../../../assets/ico_comment.png');

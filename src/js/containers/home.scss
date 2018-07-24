@@ -10,6 +10,38 @@ $detailMargin: 434px;
   background-size: cover;
   background-image:url("../../assets/img_bg.png");
 }
+
+.layerContainer {
+  position: fixed;
+  top: 696px;
+  right:44px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.join {
+  display: inline-block;
+  height: 77px;
+  width: 183px;
+  margin-right: 44px;
+}
+
+.topBtn {
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+  border:0;
+  outline: none;
+  opacity: 0.3;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image:url("../../assets/ico_top.png");
+  &:hover {
+    opacity: 1;
+  }
+}
+
 .topbg {
   position: relative;
   width: 100%;
@@ -19,28 +51,10 @@ $detailMargin: 434px;
   background-position-y: -50px;
 }
 
+
 .bg_middle {
   background:url("../../assets/img_bg.png") center center no-repeat;
   background-size: cover;
-}
-
-.topBtn {
-  height: 60px;
-  width: 60px;
-  position: fixed;
-  border-radius: 10px;
-  border:0;
-  outline: none;
-  top:650px;
-  right:4%;
-  opacity: 0.3;
-  z-index: 999;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-image:url("../../assets/ico_top.png");
-  &:hover {
-    opacity: 1;
-  }
 }
 
 .logo{
@@ -83,16 +97,6 @@ $detailMargin: 434px;
 }
 
 
-.join {
-  display: block;
-  position: fixed;
-  top: 570px;
-  right: 4%;
-  height: 77px;
-  width: 183px;
-  z-index: 999;
-}
-
 .title {
   margin: 0 auto;
   height: 167px;
@@ -110,7 +114,7 @@ $detailMargin: 434px;
 .content {
   >div {
     margin: 0 auto;
-    width: 536px;
+    width: 871px;
   }
   padding-bottom: 52px;
 }
@@ -133,6 +137,7 @@ $detailMargin: 434px;
 
 .time_parttwo {
   padding: 5px 0;
+  margin:  0 auto;
   background-color: rgba(#23223D,0.6);
   text-align: center;
   width: 557px;
@@ -174,7 +179,7 @@ $detailMargin: 434px;
 }
 
 .marigin_bt {
-  margin-bottom: 20px;
+  margin-bottom: 10px !important;
 }
 
 .juryContaienr {
@@ -214,4 +219,15 @@ $detailMargin: 434px;
 
 .jury {
   width: 800px;
+}
+.inner {
+  padding: 10px;
+  background-color: rgba(35,34,61,0.8);
+  width: 80%;
+  margin-left: 5%;
+  p {
+    font-size: 16px !important;
+    line-height: 20px;
+    letter-spacing: 1px;
+  }
 }

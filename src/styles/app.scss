@@ -18,8 +18,8 @@ a {
   text-decoration: none;
 }
 
-body::-webkit-scrollbar {
-  display: none;/*隐藏滚轮*/
+* ::-webkit-scrollbar {/*隐藏滚轮*/
+  display: none;
 }
 
 img {
