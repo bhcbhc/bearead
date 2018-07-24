@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import acid  from './acid'
+import book  from './book'
 
 const rootReducer = combineReducers({
-  acid
+  book
 });
 
 export default rootReducer;

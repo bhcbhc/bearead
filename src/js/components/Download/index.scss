@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+$whe: 200px;
+.container {
+  position: fixed;
+  top:0;
+  background: rgba(0,0,0,0.30);
+  width: 100%;
+  min-height: 100vh;
+  z-index: 999;
+}
+
+.download {
+  width: 560px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 2px 20px 0 rgba(0,0,0,0.05);
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 54px;
+  img {
+    width: 365px;
+    height: 236px;
+    margin-top: 120px;
+  }
+}
+
+.bearead {
+  font-family: PingFangSC-Medium,Helvetica,Roboto,Arial,sans-serif;
+  font-size: 36px;
+  color: #3A3D40;
+  text-align: center;
+}
+
+.sign {
+  font-family: PingFangSC-Regular,Helvetica,Roboto,Arial,sans-serif;
+  font-size: 24px;
+  color: #707376;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.button {
+  width: 400px;
+  height: 68px;
+  background: #2E9FFF;
+  border-radius: 100px;
+  font-family: PingFangSC-Medium,Helvetica,Roboto,Arial,sans-serif;
+  font-size: 28px;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.close {
+  border: 2px solid #FFFFFF;
+  height: 80px;
+  width: 80px;
+  border-radius: 44px;
+  margin: 15px auto 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  font-weight: lighter;
+  color: #FFFFFF;
+}

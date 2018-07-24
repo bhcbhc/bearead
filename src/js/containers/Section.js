@@ -13,7 +13,7 @@ class Detail extends Component {
 
     componentDidMount(){
         console.log(this.props.params.id);
-        console.log(this.props.acid)
+        console.log(this.props.book)
     }
 
     render() {
@@ -27,7 +27,7 @@ class Detail extends Component {
 
 
 const mapStateToProps = state => ({
-    acid: state.acid
+    book: state.book
 });
 
 export default connect(
