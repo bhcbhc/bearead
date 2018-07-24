@@ -6,14 +6,17 @@ import React from 'react'
 // import 'react-fastclick'  // 这个需要放到react下方才行
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import Home from './containers/Home'
+import { browserHistory } from 'react-router'
+import Root from './containers/Root'
+import configureStore from './redux/store/configureStore'
 
 import Redbox from 'redbox-react'
 const rootEl = document.getElementById('app');
+const store = configureStore();
 
 render(
     <AppContainer errorReporter={Redbox}>
-        <Home />
+        <Root store={store} history={browserHistory} />
     </AppContainer>,
     rootEl
 )
@@ -27,19 +30,19 @@ if (module.hot) {
      */
     const orgError = console.error; // eslint-disable-line no-console
     console.error = (message) => { // eslint-disable-line no-console
-        if (message && message.indexOf('You cannot change <Home >;') === -1) {
+        if (message && message.indexOf('You cannot change <Router routes>;') === -1) {
             // Log the error as normally
             orgError.apply(console, [message]);
         }
     };
 
-    module.hot.accept('./containers/Home', () => {
+    module.hot.accept('./containers/Root', () => {
         // If you use Webpack 2 in ES modules mode, you can
         // use <App /> here rather than require() a <NextApp />.
-        const NextApp = require('./containers/Home').default;
+        const NextApp = require('./containers/Root').default;
         render(
             <AppContainer errorReporter={Redbox}>
-                <NextApp />
+                <NextApp store={store} history={browserHistory} />
             </AppContainer>,
             rootEl
         )
