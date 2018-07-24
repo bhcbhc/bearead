@@ -3,7 +3,6 @@
  *
  */
 import React, { Component } from 'react';
-import browserHistory from 'react-router';
 import { connect } from 'react-redux'
 import Download from '../components/Download'
 import Tag from '../components/Tag';
