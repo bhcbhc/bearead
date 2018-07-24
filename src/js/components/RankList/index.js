@@ -82,7 +82,7 @@ export  default class RankList extends Component {
 
     render () {
         const {type, data, isLoading} =this.state;
-        const {acid} = this.props
+        const {acid, router} = this.props;
         return (
             <div className={style.rankList}>
                 <div>
@@ -98,6 +98,7 @@ export  default class RankList extends Component {
                         {
                             data.map((item, index) =>(
                                 <Rank
+                                    router={router}
                                     key={`${item.bid}_${index}`}
                                     bookName={item.book_name}
                                     description={item.desc}

@@ -3,6 +3,9 @@
  *
  */
 import React, {Component} from 'react';
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import {changeBook} from '../../../redux/actions/changeBookAction';
 import { numberParser } from '../../../utils/tools';
 import style from './index.scss';
 
@@ -13,13 +16,20 @@ const third = require('../../../../assets/ico_thrid.png');
 const share = require('../../../../assets/ico_share.png');
 const comment = require('../../../../assets/ico_comment.png');
 
-export  default class Rank extends Component {
+const mapStateToProps = state => ({});
+
+const mapDispatchToProps = dispatch => ({
+    actions: bindActionCreators({changeBook}, dispatch)
+});
+
+class Rank extends Component {
     constructor(props){
         super(props);
     }
 
-    handleClick (id, appUrl, webUrl, wapUrl) {
-       window.location.href=webUrl;
+    handleClick (book) {
+        this.props.actions.changeBook(book);
+        this.props.router.push('/detail');
     }
 
     render () {
@@ -38,6 +48,19 @@ export  default class Rank extends Component {
             isComment,
             index } =this.props;
 
+        const book = {
+            app_url: appUrl,
+            wap_url: wapUrl,
+            web_url: webUrl,
+            author_name: author,
+            bid,
+            desc: description,
+            book_name: bookName,
+            cover,
+            icon: authorImg,
+            tags: label.map(item => item.name)
+        };
+
         function getIcon(index) {
             if(index === 1) return <img className="left" src={first} />;
             else if (index === 2) return <img className="left" src={secont} />;
@@ -45,7 +68,7 @@ export  default class Rank extends Component {
             return <span className="left">{index}</span>
         }
         return (
-            <div className={style.rank} onClick={this.handleClick.bind(this, bid, appUrl, webUrl, wapUrl)}>
+            <div className={style.rank} onClick={this.handleClick.bind(this,book)}>
                 <div className={`${style.icon} left`}>
                     {getIcon(index)}
                 </div>
@@ -87,3 +110,5 @@ export  default class Rank extends Component {
         )
     }
 }
+
+export  default connect(mapStateToProps, mapDispatchToProps)(Rank)

@@ -106,6 +106,7 @@ export default class Home extends Component {
 
     render() {
         const {acid, prizes} = this.state;
+        const {router} = this.props;
         return (
             <div className={style.container}>
                 <button onClick={toTop} className={style.topBtn} />
@@ -308,7 +309,7 @@ export default class Home extends Component {
                     </div>
                 <div className={style.helpWife}></div>
                 <div className={style.rankListContainer}>
-                    <RankList acid="128" />
+                    <RankList acid="128" router={router}/>
                 </div>
                 <Footer />
             </div>
