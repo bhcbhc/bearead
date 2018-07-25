@@ -3,9 +3,7 @@
  *
  */
 import React, {Component} from 'react';
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-import {changeBook} from '../../../redux/actions/changeBookAction';
+import Shiitake from 'shiitake';
 import { numberParser } from '../../../utils/tools';
 import style from './index.scss';
 
@@ -16,20 +14,13 @@ const third = require('../../../../assets/ico_third.png');
 const share = require('../../../../assets/ico_share.png');
 const comment = require('../../../../assets/ico_comment.png');
 
-const mapStateToProps = state => ({});
-
-const mapDispatchToProps = dispatch => ({
-    actions: bindActionCreators({changeBook}, dispatch)
-});
-
-class Rank extends Component {
+export default class Rank extends Component {
     constructor(props){
         super(props);
     }
 
-    handleClick (book) {
-        this.props.actions.changeBook(book);
-        this.props.router.push('/detail');
+    handleClick (appUrl, webUrl, wapUrl) {
+        window.location.href = webUrl;
     }
 
     render () {
@@ -48,18 +39,6 @@ class Rank extends Component {
             isComment,
             index } =this.props;
 
-        const book = {
-            app_url: appUrl,
-            wap_url: wapUrl,
-            web_url: webUrl,
-            author_name: author,
-            bid,
-            desc: description,
-            book_name: bookName,
-            cover,
-            icon: authorImg,
-            tags: label.map(item => item.name)
-        };
 
         function getIcon(index) {
             if(index === 1) return <img className="left" src={first} />;
@@ -68,39 +47,35 @@ class Rank extends Component {
             return <span className="left">{index}</span>
         }
         return (
-            <div className={style.rank} onClick={this.handleClick.bind(this,book)}>
-                <div className={`${style.icon} left`}>
-                    {getIcon(index)}
-                </div>
+            <div className={style.rank} onClick={this.handleClick.bind(this,appUrl, webUrl, wapUrl)}>
+                {getIcon(index)}
                 <div className={`${style.container} left`}>
                     <div className={`${style.content} clearfix`}>
                         <div className={style.contentMain}>
                             <img className="right"  src={cover}/>
                             <p className={style.title}>{bookName}</p>
-                            <p className={style.descriptionContainer}>
-                                {description.length >= 72 ? `${description.substring(0, 70)}...` : description}
-                            </p>
-                        </div>
-                        <div className={style.tag}>
-                            {
-                                label.map((item,index) =>
-                                    (
-                                        <span key={index}>{index < label.length-1 ? `${item.name}/` : `${item.name}`}</span>
+                            <div className={style.hiedP}>
+                                <p>{description}</p>
+                            </div>
+                            <div className={style.tag}>
+                                {
+                                    label.map((item,index) =>
+                                        (
+                                            <span key={index}>{index < label.length-1 ? `${item.name}/` : `${item.name}`}</span>
+                                        )
                                     )
-                                )
-                            }
+                                }
+                            </div>
                         </div>
                     </div>
                     <div className={`${style.author_count}`}>
                         <div className={`${style.author}`}>
-                            <div className={style.userImg}>
-                                <img src={authorImg.split('_thumb')[0]} />
-                            </div>
+                            <img className={style.userImg} src={authorImg.split('_thumb')[0]} />
                             <span className={style.author}>{author}</span>
                         </div>
                         <div className={`${style.counts}`}>
                             <div className={style.number}>
-                                <img src={isComment ? comment : share } />
+                                <img className={isComment ? style.imgComment : style.imgShare } src={isComment ? comment : share } />
                                 <span className={style.comment}>{count === 0 ? "" : numberParser(count)}</span>
                             </div>
                         </div>
@@ -110,5 +85,3 @@ class Rank extends Component {
         )
     }
 }
-
-export  default connect(mapStateToProps, mapDispatchToProps)(Rank)

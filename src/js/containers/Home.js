@@ -270,12 +270,12 @@ export default class Home extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={style.content}>
+                            <div className={`${style.content} ${style.mt2}`}>
                                 <div>
                                     <div className={style.title}>
                                         <img  src={awardHead} />
                                     </div>
-                                    <div>
+                                    <div className={style.lastContainer}>
                                         {
                                             prizes.length<=4 ?
                                                 prizes.map(item => (<AwardContent key={item.sort} level={item.sort} count={item.prize} number={item.number}/>))

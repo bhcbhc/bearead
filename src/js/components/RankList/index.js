@@ -87,14 +87,10 @@ export  default class RankList extends Component {
             <div className={style.rankList}>
                 <div>
                     <div className={style.rankButton}>
-                        <div className="left" onClick={this.changeRankType.bind(this,'comment', acid)}>
-                            { type === 'share' ? <img src= {commentUnselect}/> : <img  src={commentSelect} />}
-                        </div>
-                        <div className="left" onClick={this.changeRankType.bind(this,'share', acid)}>
-                            { type === 'share' ? <img src={shareSelect}/> : <img src={shareUnselect} />}
-                        </div>
+                        <img src= { type === 'share' ? commentUnselect : commentSelect} onClick={this.changeRankType.bind(this,'comment', acid)} />
+                        <img src={ type === 'share' ? shareSelect : shareUnselect } onClick={this.changeRankType.bind(this,'share', acid)}/>
                     </div>
-                    <div >
+                    <div className={style.listContainer}>
                         {
                             data.map((item, index) =>(
                                 <Rank
