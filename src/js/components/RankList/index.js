@@ -105,6 +105,8 @@ export  default class RankList extends Component {
         return (
             <div>
                 <div className={style.rankButton}>
+                    <div className=""></div>
+                    <div className=""></div>
                     <img src= { type === 'share' ? commentUnselect : commentSelect} onClick={this.changeRankType.bind(this,'comment', acid)} />
                     <img src={ type === 'share' ? shareSelect : shareUnselect } onClick={this.changeRankType.bind(this,'share', acid)}/>
                 </div>

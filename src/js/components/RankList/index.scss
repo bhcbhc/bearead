@@ -1,13 +1,11 @@
 @charset "utf-8";
 .rankList {
-  opacity: 0.6;
-  background: #444162;
+  background: rgba(68,65,98, 0.6);
   margin: 0 auto;
   padding-bottom: 28px;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
   width: 690px;
-  margin-top: -13px;
   >div {
     width: 100%;
     margin: 0 auto;
@@ -20,19 +18,16 @@
 
 .rankButton {
   margin: 0 auto;
-  overflow: auto;
+  height: 100px;
   width: 690px;
   img {
-    height: 100px;
     width: 345px;
-    margin-top: -15px;
+    height: 100%;
   }
 }
 
 .listContainer {
   padding-top: 30px;
-  opacity: 0.6;
-  background: #444162;
 }
 
 .loadMore {

@@ -251,9 +251,11 @@ export default class Home extends Component {
                                             <p>投票规则 : 每位用户，需要登陆app，每天可以投25票，不限赛区，不限作品</p>
                                         </div>
                                         <div className={`${style.inner} ${style.marigin_bt}`}>
-                                                <p>每位用户，投票结束，转发分享成功之后，可以获得5张赠票。每位用户每天赠票上限25张；</p>
+                                            <div>
+                                                <p>每位用户，投票结束，转发微博分享成功之后，可以获得5张赠票。每位用户每天赠票上限25张；</p>
                                                 <p>每位用户，可以使用白熊币和小鱼干兑换投票，兑换比例为：10白熊币=1票；20小鱼干=1票。</p>
                                                 <p>每位用户每天兑换总计上限25票；</p>
+                                            </div>
                                         </div>
                                         <div className={style.p_container}>
                                             <p>（5）</p>
@@ -293,8 +295,8 @@ export default class Home extends Component {
                                                 <img  src={allDivisionAwardHead} />
                                             </div>
                                             <div>
-                                                <AllawardContent level="白熊人气王" count={10000} number={1} content="由六个赛区最佳人气奖的最高票决出，如果出现票数一样的情况，该票数一致的作品限时24小时投票决定" />
-                                                <AllawardContent level="编辑部之星" count={10000} number={1} content="由白熊编辑部在全部赛区中评选" />
+                                                <AllawardContent level="最受欢迎人气奖" count={10000} number={1} content="由六个赛区最佳人气奖的最高票决出，如果出现票数一样的情况，该票数一致的作品限时24小时投票决定" />
+                                                <AllawardContent level="编辑部大奖" count={10000} number={1} content="由白熊编辑部在全部赛区中评选" />
                                             </div>
                                         </div>
                                     </div>
@@ -302,7 +304,9 @@ export default class Home extends Component {
                             }
                         </div>
                     </div>
-                <div className={style.helpWife}></div>
+                <div className={style.helpWife}>
+                    <img src={wife}/>
+                </div>
                 <div className={style.rankListContainer}>
                     <RankList acid={acid} router={router}/>
                 </div>

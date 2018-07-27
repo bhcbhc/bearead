@@ -17,7 +17,7 @@ $detailMargin: 434px;
   position: relative;
   width: 100%;
   overflow: auto;
-  background-size: contain;
+  background-size: 100% 21.5%;
   background-image: url('../../assets/img_bg.png');
 }
 
@@ -91,11 +91,21 @@ $detailMargin: 434px;
   .detail{
     margin-top: -540px;
   }
+  .helpWife {
+    img {
+      width: 1920px;
+    }
+  }
 }
 
 @media (max-width: 1600px) {
   .detail{
     margin-top: -664px;
+  }
+  .helpWife {
+    img {
+      width: 1600px;
+    }
   }
 }
 
@@ -104,11 +114,21 @@ $detailMargin: 434px;
   .detail{
     margin-top: -684px;
   }
+  .helpWife {
+    img {
+      width: 1440px;
+    }
+  }
 }
 
 @media (max-width: 1366px) {
   .detail{
     margin-top: -684px;
+  }
+  .helpWife {
+    img {
+      width: 1366px;
+    }
   }
 }
 
@@ -116,22 +136,31 @@ $detailMargin: 434px;
   .detail{
     margin-top: -684px;
   }
+  .helpWife {
+    img {
+      width: 1280px;
+    }
+  }
 }
 
 @media (max-width: 1024px) {
   .detail{
     margin-top: -684px;
   }
+  .helpWife {
+    img {
+      width: 1024px;
+    }
+  }
 }
 
 
 .helpWife {
-  position: relative;
-  width: 100%;
-  height: 480px;
-  margin: 0 auto;
-  background-image:url("../../assets/img_cell.png");
-  background-size:100% 100%;
+  text-align: center;
+  img {
+    width: 100%;
+    height: 480px;
+  }
 }
 
 .top20 {
@@ -155,6 +184,7 @@ $detailMargin: 434px;
 .title {
   margin: 0 auto;
   text-align: center;
+  margin-left: -2%;
   img {
     margin-top: -22px;
     height: 167px;
@@ -284,9 +314,13 @@ $detailMargin: 434px;
   width: 800px;
 }
 .inner {
-  padding: 10px;
-  background-color: rgba(#000,0.2);
-  margin-left: 40px;
+  background-color: rgba(0,0,0,0.2);
+  >div {
+    border-radius: 5px;
+    margin-left: 38px;
+    width: 82%;
+    padding: 10px;
+  }
   p {
     font-size: 16px !important;
     line-height: 20px;
