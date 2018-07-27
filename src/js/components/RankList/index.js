@@ -103,39 +103,39 @@ export  default class RankList extends Component {
         const {type, data, isLoading} =this.state;
         const {acid, router} = this.props;
         return (
-            <div className={style.rankList}>
-                <div>
-                    <div className={style.rankButton}>
-                        <img src= { type === 'share' ? commentUnselect : commentSelect} onClick={this.changeRankType.bind(this,'comment', acid)} />
-                        <img src={ type === 'share' ? shareSelect : shareUnselect } onClick={this.changeRankType.bind(this,'share', acid)}/>
-                    </div>
-                    <div className={style.listContainer}>
-                        {
-                            data.map((item, index) =>(
-                                <Rank
-                                    router={router}
-                                    key={`${item.bid}_${index}`}
-                                    bookName={item.book_name}
-                                    description={item.desc}
-                                    label={item.tags}
-                                    cover={item.cover}
-                                    author={item.author_name}
-                                    authorImg={item.icon}
-                                    bid={item.bid}
-                                    count={type=== "comment" ? item.comments : item.shares}
-                                    appUrl={item.app_url}
-                                    webUrl={item.web_url}
-                                    wapUrl={item.wap_url}
-                                    isComment={type === "comment" ? true : false}
-                                    index={index+1} />
-                            ))
-                        }
-                        {
-                            isLoading ? (<div className={style.animate}><span className="fa fa-spinner fa-pulse" /></div>) : null
-                        }
-                    </div>
+            <div>
+                <div className={style.rankButton}>
+                    <img src= { type === 'share' ? commentUnselect : commentSelect} onClick={this.changeRankType.bind(this,'comment', acid)} />
+                    <img src={ type === 'share' ? shareSelect : shareUnselect } onClick={this.changeRankType.bind(this,'share', acid)}/>
                 </div>
-                <button className={style.loadMore} onClick={this.loadMore.bind(this, acid)}>查看更多</button>
+                <div className={style.rankList}>
+                        <div className={style.listContainer}>
+                            {
+                                data.map((item, index) =>(
+                                    <Rank
+                                        router={router}
+                                        key={`${item.bid}_${index}`}
+                                        bookName={item.book_name}
+                                        description={item.desc}
+                                        label={item.tags}
+                                        cover={item.cover}
+                                        author={item.author_name}
+                                        authorImg={item.icon}
+                                        bid={item.bid}
+                                        count={type=== "comment" ? item.comments : item.shares}
+                                        appUrl={item.app_url}
+                                        webUrl={item.web_url}
+                                        wapUrl={item.wap_url}
+                                        isComment={type === "comment" ? true : false}
+                                        index={index+1} />
+                                ))
+                            }
+                            {
+                                isLoading ? (<div className={style.animate}><span className="fa fa-spinner fa-pulse" /></div>) : null
+                            }
+                        </div>
+                    <button className={style.loadMore} onClick={this.loadMore.bind(this, acid)}>查看更多</button>
+                </div>
             </div>
         )
     }

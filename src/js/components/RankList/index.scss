@@ -4,8 +4,10 @@
   background: #444162;
   margin: 0 auto;
   padding-bottom: 28px;
-  border-radius: 18px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
   width: 690px;
+  margin-top: -13px;
   >div {
     width: 100%;
     margin: 0 auto;
@@ -19,6 +21,7 @@
 .rankButton {
   margin: 0 auto;
   overflow: auto;
+  width: 690px;
   img {
     height: 100px;
     width: 345px;
