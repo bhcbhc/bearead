@@ -60,7 +60,7 @@ const  btn6_select= require('../../assets/btn_6_select.png');
 const jury1 = require('../../assets/user_1.png');
 const jury2 = require('../../assets/user_2.png');
 
-const topLogo = require('../../assets/logo_bxyd.png');
+const wife =  require('../../assets/img_cell.png');
 
 function toTop() {
     document.body.scrollTop = 0;
