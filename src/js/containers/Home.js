@@ -98,7 +98,7 @@ export default class Home extends Component {
         const isOver = bid === '117' ? true: false;
         if (acid !== bid) {
             this.setState({acid: bid, isOver});
-            if(this.state.acid === '128' || this.state.acid === '122'  || this.state.acid === '117') {
+            if(this.state.acid === '128' || this.state.acid === '126'  || this.state.acid === '117') {
                 this.loadDetail();
             }
         }
@@ -110,7 +110,7 @@ export default class Home extends Component {
         return (
             <div className={style.container}>
                 <div className={style.layerContainer}>
-                    <a className={style.join} href="https://www.bearead.com/app.html">
+                    <a className={style.join} href={`https://www.bearead.com/list/activityDetail.html?acid=${acid}`}>
                         <img src={join} height="100%"  width="100%" alt="joinBtn"/>
                     </a>
                     <button onClick={toTop} className={style.topBtn} />
@@ -121,18 +121,18 @@ export default class Home extends Component {
                 <div className={style.detail}>
                         <div className={style.detail_bg} />
                         <div className={style.relative}>
-                            <div className={`${style.content} ${style.top20}`}>
+                            <div className={`${style.top20}`}>
                                 <div>
                                     <div className={style.title}>
-                                        <img  src={divisionHead}/>
+                                        <img  style={{"margin-top": 0}} src={divisionHead}/>
                                     </div>
                                     <div className={`divisionContainer`}>
                                         <div>
                                             <div onClick={this.handleClick.bind(this, '128')}>
                                                 <Division imgUrl={ btn1 } holdImg={ btn1_holder } selectedImg={ btn1_select } alt="单篇赛区图片"  isActived={acid === '128'} />
                                             </div>
-                                            <div onClick={this.handleClick.bind(this, '125')}>
-                                                <Division imgUrl={ btn2 } holdImg={ btn2_holder } selectedImg={ btn2_select } alt="古风赛区图片"  isActived={acid === '125'}/>
+                                            <div onClick={this.handleClick.bind(this, '126')}>
+                                                <Division imgUrl={ btn2 } holdImg={ btn2_holder } selectedImg={ btn2_select } alt="古风赛区图片"  isActived={acid === '126'}/>
                                             </div>
                                             <div onClick={this.handleClick.bind(this, '117')}>
                                                 <Division imgUrl={ btn3} holdImg={ btn3_holder  } selectedImg={ btn3_select } alt="幻想赛区图片"  isActived={acid === '117'} />
@@ -153,7 +153,7 @@ export default class Home extends Component {
                                     <Annotation />
                                 </div>
                             </div>
-                            <div className={`${style.content} ${style.shadow}`}>
+                            <div className={`${style.content} ${style.content2} ${style.shadow}`}>
                                 <div className={style.jury}>
                                     <div className={style.title}>
                                         <img  src={juryHead} />
@@ -178,8 +178,8 @@ export default class Home extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={style.content}>
-                                <div>
+                            <div className={`${style.content} ${style.content3}`}>
+                                <div style={{width: "871px"}}>
                                     <div className={style.title}>
                                         <img  src={conditionHead}/>
                                     </div>
@@ -195,7 +195,7 @@ export default class Home extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`${style.content} ${style.shadow}`}>
+                            <div className={`${style.content} ${style.content4}  ${style.shadow}`}>
                                 <div>
                                     <div className={style.title}>
                                         <img  src={timeHead}/>
@@ -213,13 +213,13 @@ export default class Home extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={style.content}>
+                            <div className={`${style.content} ${style.content5}`}>
                                 <div>
                                     <div className={style.title}>
                                         <img src={joinWayHead} />
                                     </div>
                                     <div className={style.joinmethod}>
-                                        <p className="step">第一步</p>
+                                        <p className="step" style={{}}>第一步</p>
                                         <p>进入极光杯各分赛区页面，点击“我要参赛”</p>
                                         <p>1. 若无作品，选择创建新作品，创建完成后点击“确认参赛”</p>
                                         <p>2. 若有符合参赛条件的作品，选择已有作品，点击“确认参赛”</p>
@@ -228,8 +228,8 @@ export default class Home extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`${style.content} ${style.shadow}`}>
-                                <div>
+                            <div className={`${style.content} ${style.content6} ${style.shadow}`}>
+                                <div style={{width: "960px"}}>
                                     <div className={style.title}>
                                         <img  src={prodFeatureHead} />
                                     </div>
@@ -270,8 +270,8 @@ export default class Home extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`${style.content} ${style.mt2}`}>
-                                <div>
+                            <div className={`${style.content} ${style.content7} ${style.mt2}`}>
+                                <div style={{"padding-bottom": "0"}}>
                                     <div className={style.title}>
                                         <img  src={awardHead} />
                                     </div>
@@ -287,7 +287,7 @@ export default class Home extends Component {
                             </div>
                             {
                                 prizes.length > 0 ? (
-                                    <div className={style.content}>
+                                    <div className={`${style.content} ${style.content8}`}>
                                         <div>
                                             <div className={style.title}>
                                                 <img  src={allDivisionAwardHead} />
@@ -304,7 +304,7 @@ export default class Home extends Component {
                     </div>
                 <div className={style.helpWife}></div>
                 <div className={style.rankListContainer}>
-                    <RankList acid="128" router={router}/>
+                    <RankList acid={acid} router={router}/>
                 </div>
                 <Footer />
             </div>

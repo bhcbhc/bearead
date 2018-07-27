@@ -64,7 +64,7 @@ export  default class RankList extends Component {
         }
     }
 
-    async componentDidMount(){
+  /*  async componentDidMount(){
         const {acid} = this.props;
         const {type, page} = this.state;
 
@@ -75,6 +75,25 @@ export  default class RankList extends Component {
             let data = await getShare(type, acid, page, 10);
             this.setState({
                 data,
+                isLoading: false
+            });
+        } catch (err) {}
+    }*/
+
+    async componentWillReceiveProps(nextProps) {
+        const {acid} = nextProps;
+        const  type= 'comment';
+        const page = 1;
+
+        try {
+            this.setState({
+                isLoading: true
+            });
+            let data = await getShare(type, acid, page, 10);
+            this.setState({
+                data,
+                type,
+                page,
                 isLoading: false
             });
         } catch (err) {}

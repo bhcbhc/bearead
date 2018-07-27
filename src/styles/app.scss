@@ -31,6 +31,9 @@ img {
   width: 100%;
 }
 .divisionContainer {
+  position: relative;
+  top: -27px;
+  margin-bottom: -31px;
   >div {
     margin: 0 auto;
     display: flex;
@@ -40,8 +43,12 @@ img {
 }
 
 .step {
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.step:first-child {
+  margin-bottom: 30px;
+  margin-top: 0;
 }
 
 .left {

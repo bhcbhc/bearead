@@ -1,8 +1,8 @@
 @charset "utf-8";
 .rankList {
-  background-color: rgba(#444162, 0.6);
+  opacity: 0.6;
+  background: #444162;
   margin: 0 auto;
-  margin-top: 75px;
   padding-bottom: 28px;
   border-radius: 18px;
   width: 690px;
@@ -11,6 +11,11 @@
     margin: 0 auto;
   }
 }
+
+.isActiveSpan {
+
+}
+
 .rankButton {
   margin: 0 auto;
   overflow: auto;
@@ -22,7 +27,9 @@
 }
 
 .listContainer {
-  margin-top: 30px;
+  padding-top: 30px;
+  opacity: 0.6;
+  background: #444162;
 }
 
 .loadMore {
