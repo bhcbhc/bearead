@@ -31,7 +31,6 @@ export default class Rank extends Component {
             cover,
             author,
             authorImg,
-            bid,
             count,
             appUrl,
             webUrl,

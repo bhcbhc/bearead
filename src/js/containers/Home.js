@@ -12,6 +12,7 @@ import RankList from '../components/RankList';
 import Footer from '../components/Footer';
 
 import {getDetail} from '../service/getData';
+import { juryIntroduce } from '../utils/constants';
 
 import style from './home.scss';
 import "../../styles/app.scss";
@@ -57,8 +58,24 @@ const  btn6_holder= require('../../assets/btn_6_holder.png');
 const  btn6_select= require('../../assets/btn_6_select.png');
 
 //评委头像
-const jury1 = require('../../assets/user_1.png');
-const jury2 = require('../../assets/user_2.png');
+const section1_1 =require('../../assets/user_1.png');
+const section1_2 = require('../../assets/user_2.png');
+
+const section2_1 =require('../../assets/user_1.png');
+const section2_2 = require('../../assets/user_2.png');
+
+const section3_1 =require('../../assets/user_1.png');
+const section3_2 = require('../../assets/user_2.png');
+
+const section4_1 =require('../../assets/user_1.png');
+const section4_2 = require('../../assets/user_2.png');
+
+const section5_1 =require('../../assets/user_1.png');
+const section5_2 = require('../../assets/user_2.png');
+
+const section6_1 =require('../../assets/user_1.png');
+const section6_2 = require('../../assets/user_2.png');
+
 
 const wife =  require('../../assets/img_cell.png');
 
@@ -73,14 +90,29 @@ export default class Home extends Component {
         super();
         this.state = {
             acid: '128',
-            isOver: false,
-            prizes: []
+            prizes: [],
+            name1: '',
+            name2: '',
+            detail1: [],
+            detail2: [],
+            condition: '',
+            url1: section1_1,
+            url2: section1_2,
         }
         this.loadDetail = this.loadDetail.bind(this)
     }
 
     componentDidMount(){
         this.loadDetail();
+        const {name1, name2, detail1, detail2} = juryIntroduce['128'];
+        this.setState({
+            name1,
+            name2,
+            detail1,
+            detail2,
+            url1: section1_1,
+            url2: section1_2,
+        })
     }
 
     async loadDetail() {
@@ -95,9 +127,28 @@ export default class Home extends Component {
 
     handleClick(bid) {
         const {acid} = this.state;
-        const isOver = bid === '117' ? true: false;
         if (acid !== bid) {
-            this.setState({acid: bid, isOver});
+            const {name1, name2, detail1, detail2, condition} = juryIntroduce[bid];
+            switch (bid) {
+                case '128':
+                    this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section1_1, url2: section1_2});
+                    break;
+                case '126':
+                    this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section2_1, url2: section2_2});
+                    break;
+                case '117':
+                    this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section3_1, url2: section3_2});
+                    break;
+                case '1114':
+                    this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section4_1, url2: section4_2});
+                    break;
+                case '1115':
+                    this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section5_1, url2: section5_2});
+                    break;
+                case '1116':
+                    this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section6_1, url2: section6_2});
+                    break;
+            }
             if(this.state.acid === '128' || this.state.acid === '126'  || this.state.acid === '117') {
                 this.loadDetail();
             }
@@ -105,8 +156,7 @@ export default class Home extends Component {
     }
 
     render() {
-        const {acid, prizes} = this.state;
-        const {router} = this.props;
+        const {acid, prizes, name1, name2, detail1, detail2, condition, url1, url2} = this.state;
         return (
             <div className={style.container}>
                 <div className={style.layerContainer}>
@@ -159,22 +209,8 @@ export default class Home extends Component {
                                         <img  src={juryHead} />
                                     </div>
                                     <div className={style.juryContaienr}>
-                                        <Jury juryUrl={jury1} name="林嶷" introduce={
-                                            [
-                                            "现任风炫动漫图书编辑部总监、资深编辑。",
-                                            "曾就职于天闻角川、腾讯动漫，有多年的轻小说、漫画评审经验，",
-                                            "对国内外的二次元小说有自身的见解。",
-                                            "曾多次担任《华文轻小说大赛》评审工作，",
-                                            "主要从题材的原创性和文笔等方面挖掘优秀作品。"]
-                                        }/>
-                                        <Jury juryUrl={jury2} name="林嶷" introduce={
-                                            [
-                                                "现任风炫动漫图书编辑部总监、资深编辑。",
-                                                "曾就职于天闻角川、腾讯动漫，有多年的轻小说、漫画评审经验，",
-                                                "对国内外的二次元小说有自身的见解。",
-                                                "曾多次担任《华文轻小说大赛》评审工作，",
-                                                "主要从题材的原创性和文笔等方面挖掘优秀作品。"]
-                                        }/>
+                                        <Jury juryUrl={url1} name={name1} introduce={detail1}/>
+                                        <Jury juryUrl={url2} name={name2} introduce={detail2}/>
                                     </div>
                                 </div>
                             </div>
@@ -183,16 +219,32 @@ export default class Home extends Component {
                                     <div className={style.title}>
                                         <img  src={conditionHead}/>
                                     </div>
-                                    <div className={style.condition}>
-                                        <p>1、单篇须为完稿；</p>
-                                        <p>2、2w字以内，不限题材；</p>
-                                        <p>3、2018年7月15日之后在白熊平台发布的作品，均可以参赛；</p>
-                                        <p>4、投稿作品必须为原创作品，不接受任何盗用他人素材内容的作品，一经发现作品存在抄袭或版权问题，取消参赛资格；</p>
-                                        <p>5、投稿作品、标题健康和谐，不涉及色情、暴力以及和国家法律相抵触的内容。带有商业推广意图的广告内容，不和谐内容等视为无效作品；</p>
-                                        <p>6、未经主办方同意，参赛者在参赛期间不得将参赛作品自行用于商业用途或授予任何第三方使用，不得用参赛作品参与与本赛事相同或类似的其他活动，且需遵守其他活动规则内容，否则取消获奖资格</p>
-                                        <p>7、作品版权归作者所有，投稿即视作允许主办方在相关专题、官网、微博、微信等公众渠道署名推广。</p>
-                                        <p>8、本活动最终解释权归“白熊阅读”所有。</p>
-                                    </div>
+                                    {acid === '128' ? (
+                                        <div className={style.condition}>
+                                            <p>1、单篇须为完稿；</p>
+                                            <p>2、2w字以内，不限题材；</p>
+                                            <p>3、参赛作品须为白熊阅读独家首发；</p>
+                                            <p>4、2018年7月15日之后在白熊平台发布的作品，均可以参赛；</p>
+                                            <p>5、投稿作品必须为原创作品，不接受任何盗用他人素材内容的作品，一经发现作品存在抄袭或版权问题，取消参赛资格；</p>
+                                            <p>6、投稿作品、标题健康和谐，不涉及色情、暴力以及和国家法律相抵触的内容。带有商业推广意图的广告内容，不和谐内容等视为无效作品；</p>
+                                            <p>7、未经主办方同意，参赛者在参赛期间不得将参赛作品自行用于商业用途或授予任何第三方使用，不得用参赛作品参与与本赛事相同或类似的其他活动，且需遵守其他活动规则内容，否则取消获奖资格</p>
+                                            <p>8、作品版权归作者所有，投稿即视作允许主办方在相关专题、官网、微博、微信等公众渠道署名推广。</p>
+                                            <p>9、本活动最终解释权归“白熊阅读”所有。</p>
+                                        </div>
+                                    ) : (
+                                        <div className={style.condition}>
+                                            <p>{`1、${condition}；`}</p>
+                                            <p>2、至截止收稿日（2018年9月20日24点），篇幅需达到10w字；</p>
+                                            <p>3、参赛作品须为白熊阅读独家首发；</p>
+                                            <p>4、2018年7月15日之后在白熊平台发布的作品，均可以参赛；</p>
+                                            <p>5、同一篇文，请勿重复投不同赛区；</p>
+                                            <p>6、投稿作品必须为原创作品，不接受任何盗用他人素材内容的作品，一经发现作品存在抄袭或版权问题，取消参赛资格；</p>
+                                            <p>7、投稿作品、标题健康和谐，不涉及色情、暴力以及和国家法律相抵触的内容。带有商业推广意图的广告内容，不和谐内容等视为无效作品；</p>
+                                            <p>9、未经主办方同意，参赛者在参赛期间不得将参赛作品自行用于商业用途或授予任何第三方使用，不得用参赛作品参与与本赛事相同或类似的其他活动，且需遵守其他活动规则内容，否则取消获奖资格</p>
+                                            <p>9、作品版权归作者所有，投稿即视作允许主办方在相关专题、官网、微博、微信等公众渠道署名推广。</p>
+                                            <p>10、本活动最终解释权归“白熊阅读”所有。</p>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                             <div className={`${style.content} ${style.content4}  ${style.shadow}`}>
@@ -308,7 +360,7 @@ export default class Home extends Component {
                     <img src={wife}/>
                 </div>
                 <div className={style.rankListContainer}>
-                    <RankList acid={acid} router={router}/>
+                    <RankList acid={acid}/>
                 </div>
                 <Footer />
             </div>
