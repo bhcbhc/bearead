@@ -136,20 +136,20 @@ export default class Home extends Component {
                 case '126':
                     this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section2_1, url2: section2_2});
                     break;
-                case '117':
+                case '131':
                     this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section3_1, url2: section3_2});
                     break;
-                case '1114':
+                case '132':
                     this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section4_1, url2: section4_2});
                     break;
-                case '1115':
+                case '133':
                     this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section5_1, url2: section5_2});
                     break;
-                case '1116':
+                case '134':
                     this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section6_1, url2: section6_2});
                     break;
             }
-            if(this.state.acid === '128' || this.state.acid === '126'  || this.state.acid === '117') {
+            if(this.state.acid === '128' || this.state.acid === '126'  || this.state.acid === '131') {
                 this.loadDetail();
             }
         }
@@ -184,19 +184,19 @@ export default class Home extends Component {
                                             <div onClick={this.handleClick.bind(this, '126')}>
                                                 <Division imgUrl={ btn2 } holdImg={ btn2_holder } selectedImg={ btn2_select } alt="古风赛区图片"  isActived={acid === '126'}/>
                                             </div>
-                                            <div onClick={this.handleClick.bind(this, '117')}>
-                                                <Division imgUrl={ btn3} holdImg={ btn3_holder  } selectedImg={ btn3_select } alt="幻想赛区图片"  isActived={acid === '117'} />
+                                            <div onClick={this.handleClick.bind(this, '131')}>
+                                                <Division imgUrl={ btn3} holdImg={ btn3_holder  } selectedImg={ btn3_select } alt="幻想赛区图片"  isActived={acid === '131'} />
                                             </div>
                                         </div>
                                         <div>
-                                            <div onClick={this.handleClick.bind(this, '1114')}>
-                                                <Division imgUrl={ btn4 } holdImg={ btn4_holder } selectedImg={ btn4_select  } alt="脑洞悬疑赛区图片"  isActived={acid === '1114'}  />
+                                            <div onClick={this.handleClick.bind(this, '132')}>
+                                                <Division imgUrl={ btn4 } holdImg={ btn4_holder } selectedImg={ btn4_select  } alt="脑洞悬疑赛区图片"  isActived={acid === '132'}  />
                                             </div>
-                                            <div onClick={this.handleClick.bind(this, '1115')}>
-                                                <Division imgUrl={ btn5 } holdImg={ btn5_holder  } selectedImg={ btn5_select } alt="职场赛区图片"  isActived={acid === '1115'} />
+                                            <div onClick={this.handleClick.bind(this, '133')}>
+                                                <Division imgUrl={ btn5 } holdImg={ btn5_holder  } selectedImg={ btn5_select } alt="职场赛区图片"  isActived={acid === '133'} />
                                             </div>
-                                            <div onClick={this.handleClick.bind(this, '1116')}>
-                                                <Division imgUrl={ btn6 } holdImg={ btn6_holder } selectedImg={ btn6_select } alt="青春赛区图片"  isActived={acid === '1116'} />
+                                            <div onClick={this.handleClick.bind(this, '134')}>
+                                                <Division imgUrl={ btn6 } holdImg={ btn6_holder } selectedImg={ btn6_select } alt="青春赛区图片"  isActived={acid === '134'} />
                                             </div>
                                         </div>
                                     </div>
