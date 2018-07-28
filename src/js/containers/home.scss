@@ -149,13 +149,6 @@ $detailMargin: 434px;
 
 .condition {
   margin: 0 auto;
-  p {
-    text-indent:-30px;
-    margin-left: 40px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: 27px;
-  }
 }
 
 .time_partone {
@@ -205,9 +198,21 @@ $detailMargin: 434px;
   justify-content: flex-start;
   p {
     font-size: 18px;
-    line-height: 20px;
+    line-height: 27px;
     letter-spacing: 1px;
     padding-bottom: 15px;
+  }
+}
+
+.p_condition {
+  display: flex;
+  justify-content: flex-start;
+  p {
+    text-indent:-30px;
+    margin-left: 40px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 27px;
   }
 }
 
