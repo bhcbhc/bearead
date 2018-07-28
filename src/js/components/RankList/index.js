@@ -36,11 +36,11 @@ export  default class RankList extends Component {
                 isLoading: true
             });
             try {
-                let data = await getShare(changeType, acid, 0, 10);
+                let data = await getShare(changeType, acid, 1, 10);
                 this.setState({
                     isLoading: false,
                     data,
-                    page: 0
+                    page: 1
                 })
             } catch (err) {}
         }
@@ -53,7 +53,7 @@ export  default class RankList extends Component {
             isLoading: true
         });
         try {
-            let res = await getShare(type, acid, page, 20);
+            let res = await getShare(type, acid, page, 10);
             this.setState({
                     isLoading: false,
                     data: [].concat(data,res),

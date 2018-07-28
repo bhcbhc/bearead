@@ -75,7 +75,7 @@ export default class Rank extends Component {
                         <div className={`${style.counts}`}>
                             <div className={style.number}>
                                 <img className={isComment ? style.imgComment : style.imgShare } src={isComment ? comment : share } />
-                                <span className={style.comment}>{count === 0 ? "" : numberParser(count)}</span>
+                                <span className={style.comment}>{count == 0 ? "" : numberParser(count)}</span>
                             </div>
                         </div>
                     </div>
