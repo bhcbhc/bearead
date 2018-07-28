@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 .rank {
-  padding-left: 55px;
-  padding-right: 50px;
+  padding-left: 43px;
+  padding-right: 45px;
   margin: 0 auto;
   border-bottom: solid 1px rgb(255, 255, 255, 0.1);
   display: flex;
@@ -11,14 +11,15 @@
   margin-bottom: 29px;
   border-bottom: 1px solid rgba(255,255,255, 0.1);
   >img {
-    height: 20px;
-    width: 15px;
-    margin-right: 20px;
+    height: 13px;
+    width: 16px;
+    margin-right: 17px;
   }
   >span {
     opacity: 0.5;
     font-family: PingFangSC-Semibold, Helvetica,Roboto,Arial,sans-serif;
     font-size: 20px;
+    line-height: 28px;
     color: #9FABDD;
     text-align: left;
     margin-right: 20px;
@@ -60,7 +61,6 @@
 .container {
   width: 95%;
 }
-
 .content{
   overflow: auto;
   img {
@@ -112,9 +112,11 @@
 }
 
 .tag {
+  opacity: 0.5;
   font-size: 16px;
   line-height: 22px;
   color: #9FABDD;
+  width: 336px;
   text-align: left;
   position: absolute;
   bottom: 0;

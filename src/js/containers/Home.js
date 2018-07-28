@@ -16,7 +16,7 @@ import { juryIntroduce } from '../utils/constants';
 
 import style from './home.scss';
 import "../../styles/app.scss";
-const join = require('../../assets/btn_cs.png');
+const join = require('../../assets/btn_kscs_wap.png');
 
 const divisionHead = require('../../assets/title_1.png'); // 赛区
 const juryHead = require('../../assets/title_2.png'); // 评委
@@ -78,6 +78,8 @@ const section6_2 = require('../../assets/user_2.png');
 
 
 const wife =  require('../../assets/img_cell.png');
+
+const icon_bearead = require('../../assets/img_bearead.png');
 
 function toTop() {
     document.body.scrollTop = 0;
@@ -159,22 +161,22 @@ export default class Home extends Component {
         const {acid, prizes, name1, name2, detail1, detail2, condition, url1, url2} = this.state;
         return (
             <div className={style.container}>
+                <img src={icon_bearead} className={style.bearead_icon} alt="bearead_icon"/>
                 <div className={style.layerContainer}>
                     <a className={style.join} href={`https://www.bearead.com/list/activityDetail.html?acid=${acid}`}>
                         <img src={join} height="100%"  width="100%" alt="joinBtn"/>
                     </a>
-                    <button onClick={toTop} className={style.topBtn} />
                 </div>
+                <button onClick={toTop} className={style.topBtn} />
                 <div className={style.topbg}>
                      {/*<LayerIcon />*/}
                 </div>
                 <div className={style.detail}>
-                        <div className={style.detail_bg} />
                         <div className={style.relative}>
                             <div className={`${style.top20}`}>
                                 <div>
                                     <div className={style.title}>
-                                        <img  style={{"margin-top": 0}} src={divisionHead}/>
+                                        <img  style={{"marginTop": 0}} src={divisionHead}/>
                                     </div>
                                     <div className={`divisionContainer`}>
                                         <div>
@@ -203,7 +205,7 @@ export default class Home extends Component {
                                     <Annotation />
                                 </div>
                             </div>
-                            <div className={`${style.content} ${style.content2} ${style.shadow}`}>
+                            <div className={`${style.content} ${style.shadow}`}>
                                 <div className={style.jury}>
                                     <div className={style.title}>
                                         <img  src={juryHead} />
@@ -214,13 +216,13 @@ export default class Home extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`${style.content} ${style.content3}`}>
-                                <div style={{width: "871px"}}>
+                            <div className={`${style.content}`}>
+                                <div>
                                     <div className={style.title}>
                                         <img  src={conditionHead}/>
                                     </div>
                                     {acid === '128' ? (
-                                        <div className={style.condition}>
+                                        <div className={style.condition} style={{width: "80%"}}>
                                             <p>1、单篇须为完稿；</p>
                                             <p>2、2w字以内，不限题材；</p>
                                             <p>3、参赛作品须为白熊阅读独家首发；</p>
@@ -232,7 +234,7 @@ export default class Home extends Component {
                                             <p>9、本活动最终解释权归“白熊阅读”所有。</p>
                                         </div>
                                     ) : (
-                                        <div className={style.condition}>
+                                        <div className={style.condition} style={{width: "80%"}}>
                                             <p>{`1、${condition}；`}</p>
                                             <p>2、至截止收稿日（2018年9月20日24点），篇幅需达到10w字；</p>
                                             <p>3、参赛作品须为白熊阅读独家首发；</p>
@@ -247,7 +249,7 @@ export default class Home extends Component {
                                     )}
                                 </div>
                             </div>
-                            <div className={`${style.content} ${style.content4}  ${style.shadow}`}>
+                            <div className={`${style.content} ${style.shadow}`}>
                                 <div>
                                     <div className={style.title}>
                                         <img  src={timeHead}/>
@@ -265,7 +267,7 @@ export default class Home extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`${style.content} ${style.content5}`}>
+                            <div className={`${style.content}`}>
                                 <div>
                                     <div className={style.title}>
                                         <img src={joinWayHead} />
@@ -280,12 +282,12 @@ export default class Home extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`${style.content} ${style.content6} ${style.shadow}`}>
-                                <div style={{width: "960px"}}>
+                            <div className={`${style.content} ${style.shadow}`}>
+                                <div>
                                     <div className={style.title}>
                                         <img  src={prodFeatureHead} />
                                     </div>
-                                    <div className={style.prodfeature}>
+                                    <div className={style.prodfeature} style={{width: "85%"}}>
                                         <p>1.  由白熊阅读编辑部按评选规则，选出优秀作品给予相应奖励</p>
                                         <p> 2. 评选规则</p>
                                         <div className={style.p_container}>
@@ -294,10 +296,12 @@ export default class Home extends Component {
                                         </div>
                                         <div className={style.p_container}>
                                             <p>（2）</p>
-                                            <p>由该赛区评委在白熊阅读编辑部给到的名单中，选出TOP10的作品进入投票环节</p></div>
+                                            <p>由该赛区评委在白熊阅读编辑部给到的名单中，选出TOP10的作品进入投票环节</p>
+                                        </div>
                                         <div className={style.p_container}>
                                             <p>（3）</p>
-                                            <p>该赛区截止至2018年9月20日24时0分，分享榜的TOP5和评论榜的TOP5直接晋级投票环节。若该名单与由评委选出的TOP10出现重合，则按榜单顺延提名</p></div>
+                                            <p>该赛区截止至2018年9月20日24时0分，分享榜的TOP5和评论榜的TOP5直接晋级投票环节。若该名单与由评委选出的TOP10出现重合，则按榜单顺延提名</p>
+                                        </div>
                                         <div className={style.p_container}>
                                             <p>（4）</p>
                                             <p>投票规则 : 每位用户，需要登陆app，每天可以投25票，不限赛区，不限作品</p>
@@ -324,8 +328,8 @@ export default class Home extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className={`${style.content} ${style.content7} ${style.mt2}`}>
-                                <div style={{"padding-bottom": "0"}}>
+                            <div className={`${style.content} ${style.mt2}`}>
+                                <div style={{"paddingBottom": "0"}}>
                                     <div className={style.title}>
                                         <img  src={awardHead} />
                                     </div>
@@ -341,7 +345,7 @@ export default class Home extends Component {
                             </div>
                             {
                                 prizes.length > 0 ? (
-                                    <div className={`${style.content} ${style.content8}`}>
+                                    <div className={`${style.content}`}>
                                         <div>
                                             <div className={style.title}>
                                                 <img  src={allDivisionAwardHead} />

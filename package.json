@@ -10,7 +10,7 @@
     "open:wap": "babel-node server_wap.js",
     "clean": "rimraf dist",
     "build:webpack": "cross-env NODE_ENV=pro webpack --config webpack-pro-config.js --progress --colors",
-    "build:webpack:wap": "cross-env NODE_ENV=pro webpack --config webpack-pro-wap--config.js --progress --colors",
+    "build:webpack:wap": "cross-env NODE_ENV=pro webpack --config webpack-pro-wap-config.js --progress --colors",
     "build": "cross-env NODE_ENV=pro npm-run-all clean build:webpack",
     "buildwap": "cross-env NODE_ENV=pro npm-run-all clean build:webpack:wap"
   },
