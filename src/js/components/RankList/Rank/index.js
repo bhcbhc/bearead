@@ -68,7 +68,7 @@ export default class Rank extends Component {
                             <div className={style.hiedP}>
                                 <p>{description}</p>
                             </div>
-                            <div className={style.tag}>
+                            <div className={`${style.tag} ${isSingle? style.singleTag: ""}`}>
                                 {
                                     label.map((item,index) =>
                                         (
