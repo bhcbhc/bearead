@@ -58,23 +58,23 @@ const  btn6_holder= require('../../assets/btn_6_holder.png');
 const  btn6_select= require('../../assets/btn_6_select.png');
 
 //评委头像
-const section1_1 =require('../../assets/user_1.png');
-const section1_2 = require('../../assets/user_2.png');
+const section1_1 =require('../../assets/HIRO.png');
+const section1_2 = require('../../assets/guoxiaochi.png');
 
-const section2_1 =require('../../assets/user_1.png');
-const section2_2 = require('../../assets/user_2.png');
+const section2_1 =require('../../assets/luofei.png');
+const section2_2 = require('../../assets/zhanchenglin.png');
 
-const section3_1 =require('../../assets/user_1.png');
-const section3_2 = require('../../assets/user_2.png');
+const section3_1 =require('../../assets/zhangyu_president.png');
+const section3_2 = require('../../assets/huajuan.png');
 
-const section4_1 =require('../../assets/user_1.png');
-const section4_2 = require('../../assets/user_2.png');
+const section4_1 =require('../../assets/zhangrui.png');
+const section4_2 = require('../../assets/yangqiong.png');
 
-const section5_1 =require('../../assets/user_1.png');
-const section5_2 = require('../../assets/user_2.png');
+const section5_1 =require('../../assets/chenhaiyan.png');
+const section5_2 = require('../../assets/gemingshi.png');
 
-const section6_1 =require('../../assets/user_1.png');
-const section6_2 = require('../../assets/user_2.png');
+const section6_1 =require('../../assets/sunai.png');
+const section6_2 = require('../../assets/zhuzhenhua.png');
 
 
 const wife =  require('../../assets/img_cell.png');
