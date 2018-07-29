@@ -48,6 +48,11 @@
   padding-bottom: 31px;
   margin-top: 15px;
   cursor: pointer;
+  &:hover {
+    p:first-child {
+      color: #fff;
+    }
+  }
   p {
     margin-left: 31px;
     margin-right: 31px;
@@ -105,4 +110,9 @@
 
 .authorContainer {
   cursor: pointer;
+  &:hover {
+    span {
+      color:#fff;
+    }
+  }
 }

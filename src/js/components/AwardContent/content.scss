@@ -32,7 +32,7 @@
   margin: 40px auto;
   position: relative;
   cursor: pointer;
-  &:hover {
+  &:hover{
     top: -5px;
   }
 }
@@ -44,6 +44,10 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: pointer;
+  &:hover {
+    color:#fff;
+  }
 }
 
 .author {
@@ -51,7 +55,7 @@
   position: relative;
   cursor: pointer;
   &:hover {
-    top: 5px
+    color: #fff;
   }
   img {
     width: 32px;

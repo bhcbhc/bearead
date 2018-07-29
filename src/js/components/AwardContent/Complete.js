@@ -40,13 +40,13 @@ export  default class Complete extends Component {
                 <div className={style.title}>
                     <p>{getLevel(level)}</p>
                 </div>
-                <img onClick={this.handleBookClick.bind(this,bid)} className={style.bookImg} src={bookImg}/>
-                <p onClick={this.handleBookClick.bind(this,bid)} className={style.bookName}>{bookName}</p>
+                <div className={style.bookContainer}>
+                    <img onClick={this.handleBookClick.bind(this,bid)} className={style.bookImg} src={bookImg}/>
+                    <p onClick={this.handleBookClick.bind(this,bid)} className={style.bookName}>{bookName}</p>
+                </div>
                 <div onClick={this.handleAuthorClick.bind(this,uid)} className={style.author}>
-                    <div>
-                        <img src={authorIcon}/>
-                        <span>{author}</span>
-                    </div>
+                    <img src={authorIcon}/>
+                    <span>{author}</span>
                 </div>
                 <div className={style.foot}>
                     <div>
