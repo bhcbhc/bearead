@@ -10,6 +10,11 @@
   padding-bottom: 31px;
   margin-bottom: 29px;
   border-bottom: 1px solid rgba(255,255,255, 0.1);
+  cursor: pointer;
+  color: #9FABDD;
+  &:hover {
+    color: #fff;
+  }
   >img {
     height: 13px;
     width: 16px;
@@ -20,7 +25,6 @@
     font-family: PingFangSC-Semibold, Helvetica,Roboto,Arial,sans-serif;
     font-size: 20px;
     line-height: 28px;
-    color: #9FABDD;
     text-align: left;
     margin-right: 20px;
   }
@@ -36,7 +40,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   font-family: PingFangSC-Semibold, Helvetica,Roboto,Arial,sans-serif;
-  color: #9FABDD;
 }
 .author {
   font-size: 18px;
@@ -93,7 +96,6 @@
   -webkit-box-orient:vertical;
   height: 66px;
   font-family: PingFangSC-Semibold, Helvetica,Roboto,Arial,sans-serif;
-  color: #9FABDD;
   p {
     font-size: 16px;
     line-height: 22px;
@@ -115,7 +117,6 @@
   opacity: 0.5;
   font-size: 16px;
   line-height: 22px;
-  color: #9FABDD;
   width: 336px;
   text-align: left;
   position: absolute;

@@ -41,7 +41,7 @@ export default {
         new webpack.NoErrorsPlugin(),
         new HtmlWebpackPlugin({     // Create HTML file that includes references to bundled CSS and JS.
             template: 'src/index.html',
-            title: '白熊阅读',
+            title: '第二届白熊阅读极光杯征文大赛',
             favicon:'./src/favicon.ico',
             minify: {
                 removeComments: true,
