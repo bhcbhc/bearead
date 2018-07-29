@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-$topBgHeight: 695px;
+$topBgHeight: 800px;
 $detailMargin: 434px;
 
 .mt2 {
@@ -23,7 +23,7 @@ $detailMargin: 434px;
 
 .layerContainer {
   position: fixed;
-  bottom: 0.44rem;
+  bottom: 88px;
   width: 100%;
   z-index: 999;
   display: flex;
@@ -44,17 +44,16 @@ $detailMargin: 434px;
 
 .topBtn {
   position: fixed;
-  bottom: 0.44rem;
+  bottom: 88px;
   right: 20px;
   height: 60px;
   width: 60px;
   border-radius: 10px;
   border:0;
   outline: none;
-  opacity: 1;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-image:url("../../assets/ico_top.png");
+  background-image:url("../../assets/totoTop.png");
   z-index: 999;
 }
 
@@ -113,8 +112,7 @@ $detailMargin: 434px;
   bottom: 0;
   right: 0;
   margin: 0 auto;
-  width: 812px;
-  height: 463px;
+  width: 98%;
   background-size: contain;
   background-repeat: no-repeat;
   background-image:url("../../assets/back_web.png");
@@ -284,4 +282,22 @@ $detailMargin: 434px;
   top:45px;
   right: 45px;
   z-index: 999;
+}
+
+@media screen and (min-width:768px) {
+  .topbg {
+    height: 11rem;
+  }
+  .detail_bg {
+    top: -134px;
+  }
+  .join {
+    height: 142px;
+    width: 662px;
+  }
+
+  .topBtn {
+    width: 108px;
+    height: 108px;
+  }
 }

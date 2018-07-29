@@ -12,11 +12,31 @@ export  default class CompleteContent extends Component {
     }
 
     handleBookClick(bid) {
-        window.location.href = 'https://www.bearead.com/book.html?bid=' + bid;
+        const versions = function(){
+            var u = navigator.userAgent;
+            return {
+                app: u.indexOf('bearead') > -1 //白熊阅读app内浏览器打开
+            };
+        }();
+        if(versions.app) {
+            window.location.href = 'bearead://www.bearead.com/book?bid=' + bid;
+        }else  {
+            window.location.href = 'https://v2.bearead.com/static/serialize-detail.html?bid=' + bid;
+        }
     }
 
     handleAuthorClick(uid){
-        window.location.href = 'https://www.bearead.com/user.html?uid=' + uid;
+        const versions = function(){
+            var u = navigator.userAgent;
+            return {
+                app: u.indexOf('bearead') > -1 //白熊阅读app内浏览器打开
+            };
+        }();
+        if(versions.app) {
+            window.location.href = 'bearead://www.bearead.com/book?uid=' + uid;
+        }else  {
+            window.location.href = 'https://v2.bearead.com/static/serialize-detail.html?uid=' + uid;
+        }
     }
 
     render () {

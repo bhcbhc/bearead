@@ -165,6 +165,14 @@ export default class Home extends Component {
     render() {
         const {acid, prizes, name1, name2, detail1, detail2, condition, url1, url2, complete} = this.state;
 
+        const versions = function(){
+            var u = navigator.userAgent;
+
+            return {
+                app: u.indexOf('bearead') > -1 //白熊阅读app内浏览器打开
+            };
+        }();
+
         function getAwardContent(prizes) {
             console.log(prizes);
             if(prizes.length) {
@@ -185,7 +193,7 @@ export default class Home extends Component {
             <div className={style.container}>
                 <img src={icon_bearead} className={style.bearead_icon} alt="bearead_icon"/>
                 <div className={style.layerContainer}>
-                    <a className={style.join} href={`https://www.bearead.com/list/activityDetail.html?acid=${acid}`}>
+                    <a className={style.join} href={ versions.app ? ("bearead://www.bearead.com/activity-detail?acid=" + acid) : ("https://v2.bearead.com/book/activity-detail?acid=" + acid)}>
                         <img src={join} height="100%"  width="100%" alt="joinBtn"/>
                     </a>
                 </div>
@@ -194,6 +202,7 @@ export default class Home extends Component {
                      {/*<LayerIcon />*/}
                 </div>
                 <div className={style.detail}>
+                        <div className={style.detail_bg} />
                         <div className={style.relative}>
                             <div className={`${style.top20}`}>
                                 <div>

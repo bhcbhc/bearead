@@ -28,9 +28,9 @@ export default class Rank extends Component {
             };
         }();
         if(versions.app) {
-            window.location.href = wapUrl;
-        }else  {
             window.location.href = appUrl;
+        }else  {
+            window.location.href = wapUrl;
         }
     }
 
