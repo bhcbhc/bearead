@@ -95,7 +95,7 @@ export default class Home extends Component {
     constructor(){
         super();
         this.state = {
-            acid: '128',
+            acid: '129',
             prizes: [],
             name1: '',
             name2: '',
@@ -110,8 +110,8 @@ export default class Home extends Component {
     }
 
     componentDidMount(){
-        this.loadDetail('128');
-        const {name1, name2, detail1, detail2} = juryIntroduce['128'];
+        this.loadDetail('129');
+        const {name1, name2, detail1, detail2} = juryIntroduce['129'];
         this.setState({
             name1,
             name2,
@@ -137,13 +137,13 @@ export default class Home extends Component {
         if (acid !== bid) {
             const {name1, name2, detail1, detail2, condition} = juryIntroduce[bid];
             switch (bid) {
-                case '128':
+                case '129':
                     this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section1_1, url2: section1_2});
                     break;
-                case '126':
+                case '130':
                     this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section2_1, url2: section2_2});
                     break;
-                case '110':
+                case '131':
                     this.setState({acid: bid, name1, name2, detail1, detail2, condition, url1: section3_1, url2: section3_2});
                     break;
                 case '132':
@@ -200,14 +200,14 @@ export default class Home extends Component {
                                     </div>
                                     <div className={`divisionContainer`}>
                                         <div>
-                                            <div onClick={this.handleClick.bind(this, '128')}>
-                                                <Division imgUrl={ btn1 } holdImg={ btn1_holder } selectedImg={ btn1_select } alt="单篇赛区图片"  isActived={acid === '128'} />
+                                            <div onClick={this.handleClick.bind(this, '129')}>
+                                                <Division imgUrl={ btn1 } holdImg={ btn1_holder } selectedImg={ btn1_select } alt="单篇赛区图片"  isActived={acid === '129'} />
                                             </div>
-                                            <div onClick={this.handleClick.bind(this, '126')}>
-                                                <Division imgUrl={ btn2 } holdImg={ btn2_holder } selectedImg={ btn2_select } alt="古风赛区图片"  isActived={acid === '126'}/>
+                                            <div onClick={this.handleClick.bind(this, '130')}>
+                                                <Division imgUrl={ btn2 } holdImg={ btn2_holder } selectedImg={ btn2_select } alt="古风赛区图片"  isActived={acid === '130'}/>
                                             </div>
-                                            <div onClick={this.handleClick.bind(this, '110')}>
-                                                <Division imgUrl={ btn3} holdImg={ btn3_holder  } selectedImg={ btn3_select } alt="幻想赛区图片"  isActived={acid === '110'} />
+                                            <div onClick={this.handleClick.bind(this, '131')}>
+                                                <Division imgUrl={ btn3} holdImg={ btn3_holder  } selectedImg={ btn3_select } alt="幻想赛区图片"  isActived={acid === '131'} />
                                             </div>
                                         </div>
                                         <div>
@@ -243,7 +243,7 @@ export default class Home extends Component {
                                             <div className={style.title}>
                                                 <img  src={conditionHead}/>
                                             </div>
-                                            {acid === '128' ? (
+                                            {acid === '129' ? (
                                                 <div className={style.condition}>
                                                     <p>1、单篇须为完稿；</p>
                                                     <p>2、2w字以内，不限题材；</p>

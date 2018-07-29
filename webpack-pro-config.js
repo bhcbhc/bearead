@@ -63,12 +63,12 @@ module.exports = {
             template:'src/index.html',
             // html模板的路径
 
-            title: '白熊阅读',
+            title: '第二届白熊阅读极光杯征文大赛',
 
             filename:'index.html',
             // 文件名以及文件将要存放的位置
 
-            favicon:'./src/favicon.ico',
+            favicon:'./src/bearead.ico',
             // favicon路径
 
             inject:'body',
