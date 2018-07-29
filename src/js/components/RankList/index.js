@@ -128,6 +128,7 @@ export  default class RankList extends Component {
                                         webUrl={item.web_url}
                                         wapUrl={item.wap_url}
                                         isComment={type === "comment" ? true : false}
+                                        isSingle ={item.book_type === "2" ? true : false}
                                         index={index+1} />
                                 ))
                             }

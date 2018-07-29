@@ -71,6 +71,14 @@
   }
 }
 
+.single {
+  img {
+    height: 100px;
+    width: 100px;
+    margin-left: 5%;
+  }
+}
+
 .author_count {
   display: flex;
   justify-content: space-between;
@@ -117,7 +125,6 @@
   line-height: 22px;
   color: #9FABDD;
   text-align: left;
-  position: absolute;
   bottom: 0;
   left:0;
   font-family: PingFangSC-Semibold, Helvetica,Roboto,Arial,sans-serif;
