@@ -168,13 +168,13 @@ export default class Home extends Component {
             if(prizes.length) {
                 if(prizes.length>=6) {
                     return (<div>
-                        <CompleteContent isKing={true} author={prizes[4].winner.author.nickname} authorIcon={prizes[4].winner.author.icon} bookName={prizes[4].winner.name} />
-                        <CompleteContent isKing={false} author={prizes[5].winner.author.nickname} authorIcon={prizes[5].winner.author.icon} bookName={prizes[5].winner.name} />
+                        <CompleteContent isKing={true} author={prizes[4].winner.author.nickname} authorIcon={prizes[4].winner.author.icon} bookName={prizes[4].winner.name} bid={prizes[4].winner.bid} uid={prizes[4].winner.author.uid} />
+                        <CompleteContent isKing={false} author={prizes[5].winner.author.nickname} authorIcon={prizes[5].winner.author.icon} bookName={prizes[5].winner.name} bid={prizes[5].winner.bid} uid={prizes[5].winner.author.uid} />
                     </div>)
                 }
                 else return (<div>
-                    <CompleteContent isKing={true} author={prizes[0].winner.author.nickname} authorIcon={prizes[0].winner.author.icon} bookName={prizes[0].winner.name} />
-                    <CompleteContent isKing={false} author={prizes[1].winner.author.nickname} authorIcon={prizes[1].winner.author.icon} bookName={prizes[1].winner.name} />
+                    <CompleteContent isKing={true} author={prizes[0].winner.author.nickname} authorIcon={prizes[0].winner.author.icon} bookName={prizes[0].winner.name} bid={prizes[0].winner.bid}  uid={prizes[0].winner.author.uid}/>
+                    <CompleteContent isKing={false} author={prizes[1].winner.author.nickname} authorIcon={prizes[1].winner.author.icon} bookName={prizes[1].winner.name} bid={prizes[1].winner.bid} uid={prizes[1].winner.author.uid}/>
                 </div>)
             }
             else return null;
@@ -383,10 +383,10 @@ export default class Home extends Component {
                                         {
                                             prizes.length ? (
                                                 <div>
-                                                    <Complete level="1" bookImg={prizes[0].winner.cover} author={prizes[0].winner.author.nickname} authorIcon={prizes[0].winner.author.icon} bookName={prizes[0].winner.name} />
-                                                    <Complete level="2" bookImg={prizes[1].winner.cover} author={prizes[1].winner.author.nickname} authorIcon={prizes[1].winner.author.icon} bookName={prizes[1].winner.name} />
-                                                    <Complete level="3" bookImg={prizes[2].winner.cover} author={prizes[2].winner.author.nickname} authorIcon={prizes[2].winner.author.icon} bookName={prizes[2].winner.name} />
-                                                    <Complete level="4" bookImg={prizes[2].winner.cover} author={prizes[2].winner.author.nickname} authorIcon={prizes[2].winner.author.icon} bookName={prizes[2].winner.name} />
+                                                    <Complete level="1" bookImg={prizes[0].winner.cover} author={prizes[0].winner.author.nickname} authorIcon={prizes[0].winner.author.icon} bookName={prizes[0].winner.name} bid={prizes[0].winner.bid} uid={prizes[0].winner.author.uid}/>
+                                                    <Complete level="2" bookImg={prizes[1].winner.cover} author={prizes[1].winner.author.nickname} authorIcon={prizes[1].winner.author.icon} bookName={prizes[1].winner.name} bid={prizes[1].winner.bid} uid={prizes[1].winner.author.uid}/>
+                                                    <Complete level="3" bookImg={prizes[2].winner.cover} author={prizes[2].winner.author.nickname} authorIcon={prizes[2].winner.author.icon} bookName={prizes[2].winner.name} bid={prizes[2].winner.bid} uid={prizes[2].winner.author.uid}/>
+                                                    <Complete level="4" bookImg={prizes[2].winner.cover} author={prizes[2].winner.author.nickname} authorIcon={prizes[2].winner.author.icon} bookName={prizes[2].winner.name} bid={prizes[2].winner.bid} uid={prizes[2].winner.author.uid}/>
                                                 </div>
                                             ): null
                                         }

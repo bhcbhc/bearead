@@ -30,6 +30,11 @@
   height: 225px;
   width: 150px;
   margin: 40px auto;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    top: -5px;
+  }
 }
 
 .bookName {
@@ -43,6 +48,11 @@
 
 .author {
   margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    top: 5px
+  }
   img {
     width: 32px;
     height: 32px;
@@ -58,7 +68,7 @@
 
 .foot {
   padding: 35px 0;
-  background: rgba(#16182D, 0.1);
+  background: rgba(#000000, 0.2);
   border-radius: 5px;
   display: flex;
   align-items: center;

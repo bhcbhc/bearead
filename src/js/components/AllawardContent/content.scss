@@ -47,6 +47,7 @@
   padding-top: 31px;
   padding-bottom: 31px;
   margin-top: 15px;
+  cursor: pointer;
   p {
     margin-left: 31px;
     margin-right: 31px;
@@ -86,7 +87,7 @@
 .foot {
   margin-top: 30px;
   padding: 35px 0;
-  background: rgba(#16182D, 0.1);
+  background: rgba(#000000, 0.2);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -100,4 +101,8 @@
       font-size: 36px;
     }
   }
+}
+
+.authorContainer {
+  cursor: pointer;
 }

@@ -11,8 +11,16 @@ export  default class Complete extends Component {
         super(props)
     }
 
+    handleBookClick(bid) {
+        window.location.href = 'https://www.bearead.com/book.html?bid=' + bid;
+    }
+
+    handleAuthorClick(uid){
+        window.location.href = 'https://www.bearead.com/user.html?uid=' + uid;
+    }
+
     render () {
-        const {level, bookImg, author, authorIcon, bookName} = this.props;
+        const {level, bookImg, author, authorIcon, bookName, bid, uid} = this.props;
         function getLevel(level) {
             if(level === '1') return '一等奖';
             else if(level === '2') return '二等奖';
@@ -32,9 +40,9 @@ export  default class Complete extends Component {
                 <div className={style.title}>
                     <p>{getLevel(level)}</p>
                 </div>
-                <img className={style.bookImg} src={bookImg}/>
-                <p className={style.bookName}>{bookName}</p>
-                <div className={style.author}>
+                <img onClick={this.handleBookClick.bind(this,bid)} className={style.bookImg} src={bookImg}/>
+                <p onClick={this.handleBookClick.bind(this,bid)} className={style.bookName}>{bookName}</p>
+                <div onClick={this.handleAuthorClick.bind(this,uid)} className={style.author}>
                     <div>
                         <img src={authorIcon}/>
                         <span>{author}</span>
