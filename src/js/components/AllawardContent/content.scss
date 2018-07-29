@@ -8,6 +8,9 @@
   border-radius: 10px;
   margin-bottom: 40px;
   font-family: PingFangSC-Semibold,"PingFang SC","Microsoft YaHei",Helvetica,Roboto,Arial,sans-serif;
+  &:last-child{
+    margin-bottom: 0;
+  }
 }
 
 .title {
@@ -29,6 +32,7 @@
 .authorIcon {
   margin: 0 auto;
   margin-top: 48px;
+  margin-bottom: -30px;
   width: 124px;
   height: 124px;
   border-radius: 62px;

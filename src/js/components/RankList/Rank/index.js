@@ -47,6 +47,7 @@ export default class Rank extends Component {
             webUrl,
             wapUrl,
             isComment,
+            isSingle,
             index } =this.props;
 
 
@@ -60,9 +61,9 @@ export default class Rank extends Component {
             <div className={style.rank} onClick={this.handleClick.bind(this,appUrl, webUrl, wapUrl)}>
                 {getIcon(index)}
                 <div className={`${style.container} left`}>
-                    <div className={`${style.content} clearfix`}>
+                    <div className={`${style.content} ${isSingle? style.single : ""} clearfix`}>
                         <div className={style.contentMain}>
-                            <img className="right"  src={cover}/>
+                            {cover ? (<img className="right"  src={cover}/>) : null}
                             <p className={style.title}>{bookName}</p>
                             <div className={style.hiedP}>
                                 <p>{description}</p>

@@ -8,6 +8,9 @@
   border-radius: 10px;
   margin-bottom: 40px;
   font-family: PingFangSC-Semibold,"PingFang SC","Microsoft YaHei",Helvetica,Roboto,Arial,sans-serif;
+  &:last-child{
+    margin-bottom: 0;
+  }
 }
 
 .title {
@@ -29,7 +32,7 @@
 .bookImg {
   height: 225px;
   width: 150px;
-  margin: 40px auto;
+  margin: 40px auto 20px;
   position: relative;
   cursor: pointer;
   &:hover{
@@ -54,6 +57,7 @@
   margin-bottom: 30px;
   position: relative;
   cursor: pointer;
+  margin-top: -60px;
   &:hover {
     color: #fff;
   }

@@ -73,6 +73,14 @@
   }
 }
 
+.single {
+  img {
+    height: 100px;
+    width: 100px;
+    margin-left: 5%;
+  }
+}
+
 .author_count {
   display: flex;
   justify-content: space-between;

@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-$topBgHeight: 800px;
+$topBgHeight: 600px;
 $detailMargin: 434px;
 
 .mt2 {
@@ -32,10 +32,10 @@ $detailMargin: 434px;
 
 .join {
   display: inline-block;
-  height: 79px;
-  width: 368px;
+  height: 35px;
+  width: 120px;
   margin: 0 auto;
-  margin-top: -54px;
+  margin-top: -30px;
   img {
     width: 100%;
     height: 100%;
@@ -44,10 +44,10 @@ $detailMargin: 434px;
 
 .topBtn {
   position: fixed;
-  bottom: 88px;
+  bottom: 90px;
   right: 20px;
-  height: 60px;
-  width: 60px;
+  height: 35px;
+  width: 35px;
   border-radius: 10px;
   border:0;
   outline: none;
@@ -107,15 +107,15 @@ $detailMargin: 434px;
 .detail_bg {
   position: absolute;
   z-index: 0;
-  top: 0;
+  top: 200px;
   left: 0;
   bottom: 0;
   right: 0;
   margin: 0 auto;
-  width: 98%;
+  width: 95%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image:url("../../assets/back_web.png");
+  background-image:url("../../assets/back_wap.png");
 }
 
 .title {
@@ -277,27 +277,27 @@ $detailMargin: 434px;
 
 .bearead_icon {
   position: absolute;
-  width: 112px;
-  height: 28px;
-  top:45px;
-  right: 45px;
+  width: 168px;
+  height: 42px;
+  top:60px;
+  right: 60px;
   z-index: 999;
 }
 
 @media screen and (min-width:768px) {
   .topbg {
-    height: 11rem;
+    height: 800px;
   }
   .detail_bg {
-    top: -134px;
+    top: -50px;
   }
   .join {
-    height: 142px;
-    width: 662px;
+    height: 97px;
+    width: 441px;
   }
 
   .topBtn {
-    width: 108px;
-    height: 108px;
+    width: 72px;
+    height: 72px;
   }
 }
