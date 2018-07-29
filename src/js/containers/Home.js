@@ -241,7 +241,7 @@ export default class Home extends Component {
                                         </div>
                                     </div>
                                     <div className={`${style.content} ${style.content3}`}>
-                                        <div style={{width: "871px"}}>
+                                        <div style={{width: "85%"}}>
                                             <div className={style.title}>
                                                 <img  src={conditionHead}/>
                                             </div>
@@ -307,7 +307,7 @@ export default class Home extends Component {
                                         </div>
                                     </div>
                                     <div className={`${style.content} ${style.content6} ${style.shadow}`}>
-                                        <div style={{width: "90%"}}>
+                                        <div style={{width: "85%"}}>
                                             <div className={style.title}>
                                                 <img  src={prodFeatureHead} />
                                             </div>

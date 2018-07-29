@@ -68,7 +68,7 @@ module.exports = {
             filename:'index.html',
             // 文件名以及文件将要存放的位置
 
-            favicon:'./src/favicon.ico',
+            favicon:'./src/bearead.ico',
             // favicon路径
 
             inject:'body',
