@@ -1,0 +1,75 @@
+.container {
+  color: #9FABDD;
+  text-align: center;
+  width: 596px;
+  padding-top: 40px;
+  margin: 0 auto;
+  background: rgba(#141414,0.2);
+  border-radius: 10px;
+  margin-bottom: 40px;
+  font-family: PingFangSC-Semibold,"PingFang SC","Microsoft YaHei",Helvetica,Roboto,Arial,sans-serif;
+}
+
+.title {
+  background: rgba(#4F51A9, 0.1);
+  border-radius: 5px;
+  width: 516px;
+  height: 56px;
+  display: flex;
+  margin:  0 auto;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 28px;
+    letter-spacing: 2px;
+    line-height: 30px;
+  }
+}
+
+.bookImg {
+  height: 225px;
+  width: 150px;
+  margin: 40px auto;
+}
+
+.bookName {
+  margin-bottom: 31px;
+  font-size: 24px;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.author {
+  margin-bottom: 30px;
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    margin-right: 9px;
+  }
+  span {
+    font-size: 20px;
+    position: relative;
+    top: -8px;
+  }
+}
+
+.foot {
+  padding: 35px 0;
+  background: rgba(#16182D, 0.1);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  >div {
+    p:first-child {
+      margin-bottom: 6px;
+      font-size: 18px;
+    }
+    P:last-child {
+      font-size: 36px;
+    }
+  }
+}
