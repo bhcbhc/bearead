@@ -192,7 +192,7 @@ export default class Home extends Component {
             <div className={style.container}>
                 <img src={icon_bearead} className={style.bearead_icon} alt="bearead_icon"/>
                 <div className={style.layerContainer}>
-                    <a className={style.join} href={ versions.app ? "bearead://www.bearead.com/activty?id=" + acid : "https://v2.bearead.com/book/activity-detail?acid=" + acid}>
+                    <a className={style.join} href={ versions.app ? "bearead://www.bearead.com/activity?id=" + acid : "https://v2.bearead.com/book/activity-detail?acid=" + acid}>
                         <img src={join} height="100%"  width="100%" alt="joinBtn"/>
                     </a>
                 </div>
